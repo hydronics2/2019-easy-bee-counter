@@ -7,8 +7,15 @@ I've posted two versions. One with an Adafruit Itsy-bitsy uController and one wi
 All The other componets are similar.  Powered by 5V.
 
 
-## Bill of Materials
+### Bill of Materials
+#### uController
+itsyBitsy M0 32bit SAMD from [mouser](https://www.mouser.com/ProductDetail/485-3727)
+feather Huzzah from [mouser](https://www.mouser.com/ProductDetail/485-3591)
 
+### PCB
+from oshpark
+
+### [Parts and pieces](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=054286973a)
 [22ohm resistors](https://www.mouser.com/ProductDetail/Xicon/266-22-RC?qs=sGAEpiMZZMvrmc6UYKmaNXFefT4dxyTCwtpTxTI0yoo%3D), bussed, qty(3)
 SIP Packaged, bussed
 
