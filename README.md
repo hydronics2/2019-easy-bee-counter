@@ -9,8 +9,10 @@ All The other componets are similar.  Powered by 5V.
 
 ### Bill of Materials
 #### uController
-itsyBitsy M0 32bit SAMD from [mouser](https://www.mouser.com/ProductDetail/485-3727)
-feather Huzzah from [mouser](https://www.mouser.com/ProductDetail/485-3591)
+- itsyBitsy M0 32bit SAMD from [mouser](https://www.mouser.com/ProductDetail/485-3727)
+- feather Huzzah from [mouser](https://www.mouser.com/ProductDetail/485-3591)
+- feather esp8266 from [mouser](https://www.mouser.com/ProductDetail/485-2821)
+- feather LoRa 900mhz from [mouser](https://www.mouser.com/ProductDetail/485-3178)
 #### PCB
 [JLCP](https://jlcpcb.com/quote#/) ~$16-25 with shipping. See instructions for ordering below
 #### Parts and Pieces from [mouser](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=054286973a)
