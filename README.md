@@ -31,4 +31,4 @@ low esr, 3.5mm lead spacing, 8mm diameter
 #### Alternative pricing
 Someone pointed out some alternative pricing that can really bring the parts cost
 - [QRE1113 Reflectance Sensors](https://lcsc.com/product-detail/Photo-Interrupter_Everlight-Elec-ITR8307_C63451.html) ~$0.13/each
-- 
+- [6 pin female headers](https://lcsc.com/product-detail/Pin-Header-Female-Header_BOOMELE-Boom-Precision-Elec-C40877_C40877.html) 8.5mm high. These are 1.5mm taller than the mouser ones.
