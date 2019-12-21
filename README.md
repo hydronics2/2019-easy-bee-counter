@@ -1,8 +1,8 @@
 # 2019-easy-bee-counter
 
-This version of the bee counter is all through hole components.  I haven't tested this but it's not much change from many other versions with a few improvemnets.
+This version of the bee counter is all through hole components.  I really wanted to make an easy to assemble bee counter for folks just starting out. I haven't tested this yet but I wanted to get it out early with a few improvemnets.  The code is pretty simple and I'll post it as soon as I can test it with a few bees flying.
 
-I've posted two versions. One with an Adafruit Itsy-bitsy uController and one with an Adafruit Feater footprint. The ItsyBitys features a SAMD21 32bit uController and one with a feather footprint.  There's a nice esp32 feather as well as a few other options.
+I've posted two versions. One with an [Adafruit Itsy-bitsy](https://www.adafruit.com/product/3727) uController and one with an [Adafruit Feather](https://www.adafruit.com/product/3405) footprint. The ItsyBitys features a SAMD21 32bit uController and one with a feather footprint.  There's a nice esp32 feather as well as a few other options.
 
 All The other componets are similar.  Powered by 5V.
 
