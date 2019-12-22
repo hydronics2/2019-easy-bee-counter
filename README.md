@@ -23,16 +23,16 @@ Feather Footprint. Choose your flavor.
 
 
 ### General Operation
-Honeybees are forced through 24 gates where optical sensors (2 per gate) sense whether the bee is present and determine the direction of the bee movement.  Each optical sensors has an IR LED and an IR sensor. When a bee is present the IR light reflects off the bee back into the sensor. ![https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG)
+Honeybees are forced through 24 gates where optical sensors (2 per gate) sense whether the bee is present and determine the direction of the bee movement.  Each optical sensors has an IR LED and an IR sensor. If no bee is present the IR light is abosorbed into the black surface. If a bee is present the IR light reflects off the bee back into the sensor. ![https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG)
 
 ### uController Pinout
 ![itsy](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/itsy_pinout.PNG)
 
 ### Shift-in registers
-There are 6 shift-in registers. Here's a great description for how to connect and program [shift registers](http://www.gammon.com.au/forum/?id=11979).  The uControlles SPI pins used to read the shift registers. Gates 1-12 use the first 3 shift registers and gates 13-24 the next 3 shift registers. Pulling the chip select pin low enables each bank of shift registers.
+There are 6 shift-in registers. Here's a great description for how to connect and program [shift registers](http://www.gammon.com.au/forum/?id=11979).  The uControlles SPI pins used to read the shift registers. Gates 1-12 use the first 3 shift registers and gates 13-24 the next 3 shift registers. Pulling the chip select pin low enables each bank of shift registers. The sensors are normalled pulled low and show 3.3V or HIGH when a bee is present.
 
 ### IR LEDs
-There are 48 IR LEDs so they were divided into two sets of 24 with each set controlled by an N-ch mosfet.  
+There are 48 IR LEDs and are divided into two sets of 24 with each set controlled by an N-ch mosfet.  
 
 
 ### Bill of Materials
