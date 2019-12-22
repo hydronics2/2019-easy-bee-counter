@@ -15,7 +15,7 @@ All The other componets are similar.  Powered by 5V.
 ![itsy](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/gerber_itsy_1.PNG)
 Feather Footprint. Choose your flavor.
 ![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/gerber_feather_1.PNG)
-- using 2 PCBs to create a sandwhich 
+- using 2 PCBs to create a sandwhich. This makes sense as you need to order at least 5 from JLPCB and it makes a tight package. The bottom PCB must be ordered [black](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/JLCPCB_order.PNG) so the IR LEDs/sensors work well.
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/pcb_notes_.PNG)
 - using 6 pin headers as dividers
 - N-Ch mosfet controlled IR LEDs such that LEDs can be controlled ON for short periods during while sensing (~20us). This is a modest enregy savings feature but seems prudent given that turning all LEDs on can pull almost 1/2 amp!
