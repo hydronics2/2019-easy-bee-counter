@@ -1,4 +1,4 @@
-# 2019-easy-bee-counter
+# 2019 Easy Bee Counter
 
 This version of the bee counter is all through hole components.  I really wanted to make an easy to assemble bee counter for folks just starting out. I haven't tested this yet but I wanted to get it out early with a few improvemnets.  The code is pretty simple and I'll post it as soon as I can test it with bees flying this srping.
 
