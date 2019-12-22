@@ -8,7 +8,7 @@ All the other componets are similar between the two PCB versions.  Powered by 5V
 
 ### Major Differences/Improvments
 - All through-hole components for easy soldering
-- A total of 24 gates (48 sensors)
+- A total of 24 gates, 48 sensors, 6 shift registers
 - ~14.75" long stretching the entire opening of a langstroth hive for easy placement
 ![gerber-long](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/gerber_itsy_2.PNG)
 - Socketed off the shelf uControllers for quick setup. Adafruit ItsyBitsy or Feather
