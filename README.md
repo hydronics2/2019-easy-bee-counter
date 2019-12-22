@@ -32,7 +32,7 @@ Honeybees are forced through 24 gates where optical sensors (2 per gate) sense w
 ![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/feather_pinout.PNG)
 
 ### Shift-in registers
-There are 6 shift-in registers. Here's a great description for how to connect and program [shift registers](http://www.gammon.com.au/forum/?id=11979).  The uControlles SPI pins used to read the shift registers. Gates 1-12 use the first 3 shift registers and gates 13-24 the next 3 shift registers. Pulling the chip select pin low enables each bank of shift registers. The sensors are normalled pulled low and show 3.3V or HIGH when a bee is present.
+There are 6 shift-in registers. Here's a great description for how to connect and program [shift registers](http://www.gammon.com.au/forum/?id=11979).  The uControlles SPI pins used to read the shift registers. Gates 1-12 use the first 3 shift registers and gates 13-24 the next 3 shift registers. Pulling the chip select pin low enables each bank of shift registers. The sensors are normally pulled low and show 3.3V or HIGH when a bee is present.
 
 ### IR LEDs
 There are 48 IR LEDs and are divided into two sets of 24 with each set controlled by an N-ch mosfet.  
