@@ -4,7 +4,7 @@ This version of the bee counter is all through hole components.  I really wanted
 
 I've posted two versions. One with an [Adafruit Itsy-bitsy](https://www.adafruit.com/product/3727) uController and one with an [Adafruit Feather](https://www.adafruit.com/product/3405) footprint. The ItsyBitys features a SAMD21 32bit uController.  Adafruit has a ton of options for [Feathers](https://www.adafruit.com/feather?gclid=CjwKCAiA__HvBRACEiwAbViuU4KmYZReV6xjxJxF3YukMTgs1Nm24d_llHE2fEjVRg_X098fisb-hBoCh80QAvD_BwE) but I thought that the wifi esp32, esp8266, or LoRA might be great options.
 
-All The other componets are similar.  Powered by 5V.
+All the other componets are similar between the two PCB versions.  Powered by 5V.
 
 ### Major Differences/Improvments
 - All through-hole components for easy soldering
