@@ -14,7 +14,7 @@ All The other componets are similar.  Powered by 5V.
 - feather esp8266 from [mouser](https://www.mouser.com/ProductDetail/485-2821)
 - feather LoRa 900mhz from [mouser](https://www.mouser.com/ProductDetail/485-3178)
 #### PCB
-[JLCP](https://jlcpcb.com/quote#/) ~$16-25 with shipping. See instructions for ordering below
+[JLCP](https://jlcpcb.com/quote#/) ~$16-25 with shipping. Order the PCBs Black. See instructions for ordering below
 #### Parts and Pieces from [mouser](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=054286973a)
 - [qre1113 Reflective Sensors](https://www.mouser.com/ProductDetail/512-QRE1113f) qty(48)
 - [6 pin female headers](https://www.mouser.com/ProductDetail/437-8018700610001101) 7mm high, 0.1" spacing, qty(~36)
