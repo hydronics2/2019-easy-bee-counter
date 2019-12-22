@@ -6,6 +6,13 @@ I've posted two versions. One with an [Adafruit Itsy-bitsy](https://www.adafruit
 
 All The other componets are similar.  Powered by 5V.
 
+### Major Differences/Improvments
+- All through-hole components for easy soldering
+- A total of 24 gates (48 sensors)
+- ~14.75" long stretching the entire opening of a langstroth hive for easy placement
+- using 2 PCBs to create a sandwhich
+
+
 
 ### Bill of Materials
 #### uController
