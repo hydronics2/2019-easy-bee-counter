@@ -10,7 +10,8 @@ All The other componets are similar.  Powered by 5V.
 - All through-hole components for easy soldering
 - A total of 24 gates (48 sensors)
 - ~14.75" long stretching the entire opening of a langstroth hive for easy placement
-- using 2 PCBs to create a sandwhich
+- using 2 PCBs to create a sandwhich 
+![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/pcb_notes_.PNG)
 
 
 
