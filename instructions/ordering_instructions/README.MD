@@ -10,3 +10,5 @@ There are a lot of different PCB manufacturers to choose from. These instruction
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/JLCPCB_order2.PNG)
 4. Select 'Black' as the PCB color.  Also for "Remove Order Number", select YES
 [pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/JLCPCB_order.PNG)
+
+The cost is about $8 for a minimum order of qty(5) PCBs plus $9-16 shipping depending on method.
