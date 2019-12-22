@@ -8,6 +8,7 @@ There are a lot of different PCB manufacturers to choose from. These instruction
 2. Go to [JLCPCB.com](https://jlcpcb.com/quote#/), create an account and click the ORDER NOW button.
 3. Click on the "Add Your Gerber File" and upload the ziped files
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/JLCPCB_order2.PNG)
+
 4. Select 'Black' as the PCB color.  Also for "Remove Order Number", select YES
 [pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/JLCPCB_order.PNG)
 
