@@ -18,7 +18,8 @@ Feather Footprint. Choose your flavor.
 - using 2 PCBs to create a sandwhich 
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/pcb_notes_.PNG)
 - using 6 pin headers as dividers
-- 
+- N-Ch mosfet controlled IR LEDs such that LEDs can be controlled ON for short periods during while sensing (~20us). This is a modest enregy savings feature but seems prudent given that turning all LEDs on can pull almost 1/2 amp!
+
 
 
 
