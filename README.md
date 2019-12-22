@@ -22,6 +22,17 @@ Feather Footprint. Choose your flavor.
 - N-Ch mosfet controlled IR LEDs such that LEDs can be controlled ON for short periods during while sensing (~20us). This is a modest enregy savings feature but seems prudent given that turning all LEDs on can pull almost 1/2 amp!
 
 
+### General Operation
+Honeybees are forced through 24 gates where optical sensors (2 per gate) sense whether the bee is present and determine the direction of the bee movement.  Each optical sensors has an IR LED and an IR sensor. When a bee is present the IR light reflects off the bee back into the sensor. ![https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG)
+
+### uController Pinout
+![itsy](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/itsy_pinout.PNG)
+
+### Shift-in registers
+There are 6 shift-in registers. Here's a great description for how to connect and program [shift registers](http://www.gammon.com.au/forum/?id=11979).  The uControlles SPI pins used to read the shift registers. Gates 1-12 use the first 3 shift registers and gates 13-24 the next 3 shift registers. Pulling the chip select pin low enables each bank of shift registers.
+
+### IR LEDs
+There are 48 IR LEDs so they were divided into two sets of 24 with each set controlled by an N-ch mosfet.  
 
 
 ### Bill of Materials
