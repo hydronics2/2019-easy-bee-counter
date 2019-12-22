@@ -6,4 +6,4 @@ This PCB version has a footprint for an Adafruit Feather such as the [esp32](htt
 
 These files were created in Autocad EAGLE PCB software. The zipped files are the gerber files needed by the PCB manufacturer.
 
-Right click and 'save link as' to download the files and then upload them to the PCB manufacturer.
+Right click and 'save link as' to download the files and then upload them to the PCB manufacturer. See the [ordering instructions here](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/instructions/ordering_instructions)
