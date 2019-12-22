@@ -36,7 +36,7 @@ There are 6 shift-in registers. Here's a great description for how to connect an
 
 ### IR LEDs
 There are 48 IR LEDs and are divided into two sets of 24 with each set controlled by an N-ch mosfet.  The forward voltage of each LED is 1.2V and about 20ma. Two LEDs are connected in series with a 22ohm resistor. 
-![led schematic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/LED_schematic.JPG)
+![led schematic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/led_schematic.PNG)
 
 
 ### Bill of Materials
