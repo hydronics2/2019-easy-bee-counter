@@ -38,6 +38,8 @@ There are 6 shift-in registers. Here's a great description for how to connect an
 There are 48 reflective sensors and each IR sensor has an IR LED. They are divided into two sets of 24 with each set controlled by an N-ch mosfet.  The forward voltage of each IR LED is 1.2V and about 20ma as shown on the [data sheet](https://www.sparkfun.com/datasheets/Robotics/QR_QRE1113.GR.pdf). Two LEDs are connected in series with a 22ohm resistor. 
 ![led schematic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/led_schematic.PNG)
 
+#### Power
+The board ships with 
 
 ### Bill of Materials
 #### uController
