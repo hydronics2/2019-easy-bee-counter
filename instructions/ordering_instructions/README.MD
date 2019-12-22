@@ -1,6 +1,6 @@
 ## Ordering from JLCPCB
 
-There are a lot of different PCB manufacturers to choose from. These instructions show JLCPCB. You need a manufacturer that can make black PCBs. The IR LEDs/sensors need a black surface to prevent false triggers.
+There are a lot of different PCB manufacturers to choose from. These instructions show JLCPCB. You need a manufacturer that can make black PCBs if you want to use the PCBs to make a sandwhich. The IR LEDs/sensors need to point to a black surface to prevent false triggers, so the bottom PCB has to be black.
 
 1. Choose which footprint you want. ItsyBitsy or Feather. Download the latest zipped gerber files.
 - [ItsyBitsy](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/eagle/itsyBitsy)
