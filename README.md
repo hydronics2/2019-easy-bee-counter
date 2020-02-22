@@ -2,7 +2,7 @@
 
 This version of the bee counter is all through hole components which makes for an easy to assemble bee counter. I've orderd the boards myself but haven't fully tested the design.  That said, it's pretty easy and I wanted to get it out early with a few improvements.  The code is also pretty simple and I'll post it as soon as I can test it with bees flying this srping.
 
-I've posted two versions. One with an [Adafruit Itsy-bitsy](https://www.adafruit.com/product/3727) uController and one with an [Adafruit Feather](https://www.adafruit.com/product/3405) footprint. The ItsyBitys features a SAMD21 32bit uController.  Adafruit has a ton of options for [Feathers](https://www.adafruit.com/feather?gclid=CjwKCAiA__HvBRACEiwAbViuU4KmYZReV6xjxJxF3YukMTgs1Nm24d_llHE2fEjVRg_X098fisb-hBoCh80QAvD_BwE) but I thought that the wifi esp32, esp8266, or LoRA might be great options.
+I've posted two versions. One with an [Adafruit Itsy-bitsy](https://www.adafruit.com/product/3727) uController and one with an [Adafruit Feather](https://www.adafruit.com/product/3405) footprint. The ItsyBitys features a SAMD21 32bit uController.  Adafruit has a ton of options for [Feathers](https://www.adafruit.com/feather?gclid=CjwKCAiA__HvBRACEiwAbViuU4KmYZReV6xjxJxF3YukMTgs1Nm24d_llHE2fEjVRg_X098fisb-hBoCh80QAvD_BwE) but I thought that the wifi esp32, esp8266, or LoRA might be great options. The esp8266 feather has a slightly different pinout so it wont work without jumping the CS1 and CS2 chipselect pins to available pins.
 
 All the other componets are similar between the two PCB versions.  Powered by 5V.
 
