@@ -60,7 +60,7 @@ SIP Packaged, bussed
 - [100k ohm resistors](https://www.mouser.com/ProductDetail/IRC-TT-Electronics/L091S104LF?qs=sGAEpiMZZMvrmc6UYKmaNdnTrsZX%2FuSiyGduauH5Qpc%3D) bussed, qty(6)
 SIP-9, 8 resistors, 9 pins
 - Shift resgisters, qty(6)
-[74HC165](https://www.mouser.com/ProductDetail/Texas-Instruments/CD74HC165EE4?qs=%2Fha2pyFadui%2FKTy9HJ5lB%2FBJ0Xswdr%252BnXu7asThazxrcGD%2FXuYTSNA%3D%3D)
+[74HC165](https://www.mouser.com/ProductDetail/595-CD74HC165E)
 - [3.3V Regulator](https://www.mouser.com/ProductDetail/Microchip-Technology/MCP1826S-3302E-AB?qs=sGAEpiMZZMsGz1a6aV8DcJ7KfjtCj7Xd5CqQpyOghgk%3D), (input, ground, output - IGO, pinout), qty(1)
 - [screw terminals](https://www.mouser.com/ProductDetail/490-TB006-508-02BE) Two pin, 0.1", qty(3-4)
 - [0.1 uF Ceramic Capacitor](https://www.mouser.com/ProductDetail/594-K104K15X7RF53H5), through hole
