@@ -2,9 +2,13 @@
 
 This version of the bee counter is all through hole components which makes for an easy to assemble bee counter. This is the 2nd version of the board (V1) as I made small improvements March 2020.  It's been tested and works with sample code provided.
 
-The current tested design uses the [Adafruit Feather](https://www.adafruit.com/product/3405) footprint. See here for older V0 instructions.  Adafruit has a ton of options for [Feathers](https://www.adafruit.com/feather?gclid=CjwKCAiA__HvBRACEiwAbViuU4KmYZReV6xjxJxF3YukMTgs1Nm24d_llHE2fEjVRg_X098fisb-hBoCh80QAvD_BwE) but I thought that the wifi esp32, esp8266, or LoRA might be great options.
+The current tested design uses the [Adafruit Feather](https://www.adafruit.com/product/3405) footprint.   Adafruit has a ton of options for [Feathers](https://www.adafruit.com/feather?gclid=CjwKCAiA__HvBRACEiwAbViuU4KmYZReV6xjxJxF3YukMTgs1Nm24d_llHE2fEjVRg_X098fisb-hBoCh80QAvD_BwE) but I thought that the wifi esp32, esp8266, or LoRA might be great options.
 
 [![Foo](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/bees_flying.PNG)](https://youtu.be/SzXWWUh2k8w)
+
+
+# [Data Analysis](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/Data)
+
 
 ### Major Differences/Improvements
 - All through-hole components for easy soldering
