@@ -7,7 +7,7 @@ The current tested design is dual footprint and accepts [Adafruit Feather](https
 [![Foo](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/bees_flying.PNG)](https://youtu.be/SzXWWUh2k8w)
 
 
-### [Data Analysis - why count bees?](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/Data)
+### [*Data Analysis - why count bees?](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/Data)
 
 
 ### Major Differences/Improvements
