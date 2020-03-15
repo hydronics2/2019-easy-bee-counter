@@ -7,7 +7,7 @@ The current tested design is dual footprint and accepts [Adafruit Feather](https
 [![Foo](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/bees_flying.PNG)](https://youtu.be/SzXWWUh2k8w)
 
 
-### [Data Analysis](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/Data)
+### [Data Analysis - why count bees?](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/Data)
 
 
 ### Major Differences/Improvements
@@ -49,6 +49,8 @@ The PCB design connects the USB power from the uController to the 3.3V regulator
 - feather Huzzah from [mouser](https://www.mouser.com/ProductDetail/485-3591)
 - feather esp8266 from [mouser](https://www.mouser.com/ProductDetail/485-2821)
 - feather LoRa 900mhz from [mouser](https://www.mouser.com/ProductDetail/485-3178)
+- ItsyBitsy M0 from [mouser](https://www.mouser.com/ProductDetail/485-3727)
+- ItsyBitsy M4 from [mouser](https://www.mouser.com/ProductDetail/485-3800)
 #### PCB
 [JLCPCB](https://jlcpcb.com/quote#/) ~$16-25 with shipping. Order the PCBs Black. See [these instructions](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/instructions/ordering_instructions) for ordering.
 #### Parts and Pieces from [mouser](https://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=054286973a)
