@@ -12,17 +12,17 @@ The current tested design is dual footprint and accepts [Adafruit Feather](https
 
 ### Major Differences/Improvements
 - All through-hole components for easy soldering
-- Dual footprint for both Feather and ItsyBitsy
+- Dual footprint, socketed, off-the-shelf uControllers => Feather and ItsyBitsy
 - Program in Arduino, Lua, and microPython
 - A total of 24 gates, 48 sensors, 6 shift registers
 - ~14.75" long stretching the entire opening of a langstroth hive for easy placement
-- Socketed off the shelf uControllers for quick setup. Feather Footprint
-- using 2 PCBs to create a sandwich. This is an inexpensive solution and makes for a tight package. The PCBs must be ordered [black](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/instructions/ordering_instructions) so the IR LEDs/sensors work well.
-- using 6 pin headers as dividers and spacers to create gates
-- N-Ch mosfet controlled IR LEDs such that LEDs can be controlled ON for short periods during while sensing (~75us). This is a modest energy savings feature but seems prudent given that turning all LEDs on can pull almost 1/2 amp!
+- using 2 PCBs to create a sandwich is an inexpensive quick solution. The PCBs must be ordered [black](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/instructions/ordering_instructions) so the IR LED emitter is absorbed into the material.
+- using 6 pin headers to create the turn-styles or gates
+- N-Ch mosfet controlled IR LEDs such that LEDs can be controlled ON for short periods during while sensing (~75us). Allows for reduced power to less than 1ma (plus uController).
 ![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/gerber_feather_1.PNG)
 ![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/finished.jpg)
 ![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/finished2.jpg)
+![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/feather_finish.PNG)
 ![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/itsy_bitsy_finish.PNG)
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/pcb_notes_.PNG)
 
@@ -31,8 +31,9 @@ Honeybees are forced through 24 gates where optical sensors (2 per gate) sense w
 
 ### uController Pinout
 #### Feather Pinout
-![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/feather_pinout.jpg)
-
+![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/feather_pinout1.PNG)
+#### ItsyBitsy Pinout
+![itsy](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/itsy_pinout.PNG)
 ### Shift-in registers
 There are 6 shift-in registers. Here's a great description for how to connect and program [shift registers](http://www.gammon.com.au/forum/?id=11979).  The uController's SPI pins read the shift registers. All six shift registers are read at the same time. The sensors are normally pulled low and show 3.3V or HIGH when a transistor is triggered and a bee is present.
 
