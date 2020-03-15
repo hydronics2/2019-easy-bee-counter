@@ -31,7 +31,7 @@ Honeybees are forced through 24 gates where optical sensors (2 per gate) sense w
 
 ### uController Pinout
 #### Feather Pinout
-![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/feather_pinout2.PNG)
+![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/feather_pinout3.PNG)
 #### ItsyBitsy Pinout
 ![itsy](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/itsy_pinout2.PNG)
 ### Shift-in registers
