@@ -1,6 +1,6 @@
 # 2019 Easy Bee Counter V.1 (see v.0 here)
 
-This version of the bee counter is all through hole components which makes for an easy to assemble bee counter. This is the 2nd version of the board (V1) as I made small improvements March 2020.  I've also tested and posted example code.
+This version of the bee counter is all through hole components which makes for an easy to assemble bee counter. This is the 2nd version of the board (V1) as I made small improvements March 2020.  It's been tested and works with sample code provided.
 
 The current tested design uses the [Adafruit Feather](https://www.adafruit.com/product/3405) footprint. See here for older V0 instructions.  Adafruit has a ton of options for [Feathers](https://www.adafruit.com/feather?gclid=CjwKCAiA__HvBRACEiwAbViuU4KmYZReV6xjxJxF3YukMTgs1Nm24d_llHE2fEjVRg_X098fisb-hBoCh80QAvD_BwE) but I thought that the wifi esp32, esp8266, or LoRA might be great options.
 
@@ -25,7 +25,7 @@ Honeybees are forced through 24 gates where optical sensors (2 per gate) sense w
 
 ### uController Pinout
 #### Feather Pinout
-![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/feather_pinout1.jpg)
+![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/feather_pinout.jpg)
 
 ### Shift-in registers
 There are 6 shift-in registers. Here's a great description for how to connect and program [shift registers](http://www.gammon.com.au/forum/?id=11979).  The uController's SPI pins read the shift registers. All six shift registers are read at the same time. The sensors are normally pulled low and show 3.3V or HIGH when a transistor is triggered and a bee is present.

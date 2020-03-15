@@ -39,16 +39,18 @@ This version of the bee counter is all through hole components which makes for a
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/10kPullup.PNG)
 
 ## TEST sensors
-Before you go any farther, test all your sensors. It's much easier to test them now before going further.
+Before you go any farther, test all your LEDs/sensors! It's much easier to test them now before going further.
 Run the sample code blink_IR_Leds.
 
-Many phones (maybe not iphone) allow you to see the IR LEDs come on.
+You cannot see the IR LEDs but many phones and cameras allow you to see the IR LEDs. See picture. (unfortunately most iphones have IR filters so try another phone until you see IR leds).
 
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/ir_sensors_on.PNG)
 
-Ok LEDs good? If not, No LEDs lighting up? Check to make sure you have 3.3V on the 3.3V pin header.  Try a camera from an Android phone.  If one or two LEDs is out, reflow your pins and/or replace the LED.
+LEDs look good? If not, are no LEDs lighting up? Check to make sure you have 3.3V on the 3.3V pin header.  Try a camera from an Android phone.  If one or two LEDs is out, reflow your pins and/or replace the LEDs until you get 100% LEDs blinking together.
 
 LEDs good, great, next test the shift registers with the sample code test_shift_registers.ino. Use a white piece of paper to trigger the sensors. If some sensors are not working, check your pins, heat up and reflow solder on pins as needed.
+
+![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/serial_output.PNG)
 
 10) Finish assembly once all sensors are tested. Install the headers that connect the top PCB to the bottom PCB.
 
