@@ -1,52 +1,44 @@
-# 2019 Easy Bee Counter
+# 2019 Easy Bee Counter V.1 (see v.0 here)
 
-This version of the bee counter is all through hole components which makes for an easy to assemble bee counter. I've orderd the boards myself but haven't fully tested the design.  That said, it's pretty easy and I wanted to get it out early with a few improvements.  The code is also pretty simple and I'll post it as soon as I can test it with bees flying this srping.
+This version of the bee counter is all through hole components which makes for an easy to assemble bee counter. This is the 2nd version of the board (V1) as I made small improvements March 2020.  I've also tested and posted example code.
 
-I've posted two versions. One with an [Adafruit Itsy-bitsy](https://www.adafruit.com/product/3727) uController and one with an [Adafruit Feather](https://www.adafruit.com/product/3405) footprint. The ItsyBitys features a SAMD21 32bit uController.  Adafruit has a ton of options for [Feathers](https://www.adafruit.com/feather?gclid=CjwKCAiA__HvBRACEiwAbViuU4KmYZReV6xjxJxF3YukMTgs1Nm24d_llHE2fEjVRg_X098fisb-hBoCh80QAvD_BwE) but I thought that the wifi esp32, esp8266, or LoRA might be great options. The esp8266 feather has a slightly different pinout so it wont work without jumping the CS1 and CS2 chipselect pins to available pins.
+The current tested design uses the [Adafruit Feather](https://www.adafruit.com/product/3405) footprint. See here for older V0 instructions.  Adafruit has a ton of options for [Feathers](https://www.adafruit.com/feather?gclid=CjwKCAiA__HvBRACEiwAbViuU4KmYZReV6xjxJxF3YukMTgs1Nm24d_llHE2fEjVRg_X098fisb-hBoCh80QAvD_BwE) but I thought that the wifi esp32, esp8266, or LoRA might be great options.
 
-All the other componets are similar between the two PCB versions.  Powered by 5V.
-
-### Major Differences/Improvments
+### Major Differences/Improvements
 - All through-hole components for easy soldering
 - A total of 24 gates, 48 sensors, 6 shift registers
 - ~14.75" long stretching the entire opening of a langstroth hive for easy placement
-![gerber-long](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/gerber_itsy_2.PNG)
-- Socketed off the shelf uControllers for quick setup. Adafruit ItsyBitsy or Feather
-![itsy](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/gerber_itsy_1.PNG)
-Feather Footprint. Choose your flavor.
-![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/gerber_feather_1.PNG)
+- Socketed off the shelf uControllers for quick setup. Feather Footprint
+![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/finished.jpg)
+![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/finished2.jpg)
 - using 2 PCBs to create a sandwich. This is an inexpensive solution and makes for a tight package. The PCBs must be ordered [black](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/instructions/ordering_instructions) so the IR LEDs/sensors work well.
 
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/pcb_notes_.PNG)
 - using 6 pin headers as dividers and spacers to create gates
-- N-Ch mosfet controlled IR LEDs such that LEDs can be controlled ON for short periods during while sensing (~20us). This is a modest enregy savings feature but seems prudent given that turning all LEDs on can pull almost 1/2 amp!
+- N-Ch mosfet controlled IR LEDs such that LEDs can be controlled ON for short periods during while sensing (~75us). This is a modest energy savings feature but seems prudent given that turning all LEDs on can pull almost 1/2 amp!
 
 
 ### General Operation
 Honeybees are forced through 24 gates where optical sensors (2 per gate) sense whether the bee is present and determine the direction of the bee movement.  Each optical sensors has an IR LED and an IR sensor. If no bee is present the IR light is abosorbed into the black surface. If a bee is present the IR light reflects off the bee back into the sensor. ![https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG)
 
 ### uController Pinout
-#### ItsyBitsy Pinout
-![itsy](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/itsy_pinout.PNG)
 #### Feather Pinout
-![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/feather_pinout1.PNG)
+![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/feather_pinout1.jpg)
 
 ### Shift-in registers
-There are 6 shift-in registers. Here's a great description for how to connect and program [shift registers](http://www.gammon.com.au/forum/?id=11979).  The uController's SPI pins read the shift registers. Gates 1-12 are connected to the first 3 shift registers and gates 13-24 the next 3 shift registers. Pulling the chip select pin low enables each bank of shift registers. The sensors are normally pulled low and show 3.3V or HIGH when a bee is present.
+There are 6 shift-in registers. Here's a great description for how to connect and program [shift registers](http://www.gammon.com.au/forum/?id=11979).  The uController's SPI pins read the shift registers. All six shift registers are read at the same time. The sensors are normally pulled low and show 3.3V or HIGH when a transistor is triggered and a bee is present.
 
 ### IR LEDs
-There are 48 reflective sensors and each IR sensor has an IR LED. They are divided into two sets of 24 with each set controlled by an N-ch mosfet.  The forward voltage of each IR LED is 1.2V and about 20ma as shown on the [data sheet](https://www.sparkfun.com/datasheets/Robotics/QR_QRE1113.GR.pdf). Two LEDs are connected in series with a 22ohm resistor. 
+There are 48 reflective sensors and each IR sensor has an IR LED. They are divided into two sets of 24 with each set controlled by an N-ch mosfet.  The forward voltage of each IR LED is 1.2V and about 20ma as shown on the [data sheet](https://www.sparkfun.com/datasheets/Robotics/QR_QRE1113.GR.pdf). Two LEDs are connected in series with a 22ohm resistor. There are jumpers on the board that allow the LEDs to be connected directly to GND. Do not make the jumper until fully tested! (refer the directions)[these instructions](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/instructions)
+
 ![led schematic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/led_schematic.PNG)
 
 ### Power
 The PCB design connects the USB power from the uController to the 3.3V regulator so that a usb cable connected to the uController can power the entire project.
 
-#### ItsyBitsy
-If externally powered via the 5V screw terminals, cut the USB power jumper next to the USB power pin.
 
 ### Bill of Materials
 #### uController
-- itsyBitsy M0 32bit SAMD from [mouser](https://www.mouser.com/ProductDetail/485-3727)
 - feather Huzzah from [mouser](https://www.mouser.com/ProductDetail/485-3591)
 - feather esp8266 from [mouser](https://www.mouser.com/ProductDetail/485-2821)
 - feather LoRa 900mhz from [mouser](https://www.mouser.com/ProductDetail/485-3178)
