@@ -2,27 +2,29 @@
 
 This version of the bee counter is all through hole components which makes for an easy to assemble bee counter. This is the 2nd version of the board (V1) as I made small improvements March 2020.  It's been tested and works with sample code provided.
 
-The current tested design uses the [Adafruit Feather](https://www.adafruit.com/product/3405) footprint.   Adafruit has a ton of options for [Feathers](https://www.adafruit.com/feather?gclid=CjwKCAiA__HvBRACEiwAbViuU4KmYZReV6xjxJxF3YukMTgs1Nm24d_llHE2fEjVRg_X098fisb-hBoCh80QAvD_BwE) but I thought that the wifi esp32, esp8266, or LoRA might be great options.
+The current tested design is dual footprint and accepts [Adafruit Feather](https://www.adafruit.com/product/3405) footprint and [Adafruit ItsyBitsy](https://www.adafruit.com/category/1008).   Adafruit has a ton of options for [Feathers](https://www.adafruit.com/feather?gclid=CjwKCAiA__HvBRACEiwAbViuU4KmYZReV6xjxJxF3YukMTgs1Nm24d_llHE2fEjVRg_X098fisb-hBoCh80QAvD_BwE) but I thought that the wifi esp32, esp8266, or LoRA might be great options. All the ItsyBitsy 3V models (M0, M4, and 32u4) should work fine.
 
 [![Foo](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/bees_flying.PNG)](https://youtu.be/SzXWWUh2k8w)
 
 
-# [Data Analysis](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/Data)
+### [Data Analysis](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/Data)
 
 
 ### Major Differences/Improvements
 - All through-hole components for easy soldering
+- Dual footprint for both Feather and ItsyBitsy
+- Program in Arduino, Lua, and microPython
 - A total of 24 gates, 48 sensors, 6 shift registers
 - ~14.75" long stretching the entire opening of a langstroth hive for easy placement
 - Socketed off the shelf uControllers for quick setup. Feather Footprint
-![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/finished.jpg)
-![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/finished2.jpg)
 - using 2 PCBs to create a sandwich. This is an inexpensive solution and makes for a tight package. The PCBs must be ordered [black](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/instructions/ordering_instructions) so the IR LEDs/sensors work well.
-
-![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/pcb_notes_.PNG)
 - using 6 pin headers as dividers and spacers to create gates
 - N-Ch mosfet controlled IR LEDs such that LEDs can be controlled ON for short periods during while sensing (~75us). This is a modest energy savings feature but seems prudent given that turning all LEDs on can pull almost 1/2 amp!
-
+![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/gerber_feather_1.PNG)
+![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/finished.jpg)
+![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/finished2.jpg)
+![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/itsy_bitsy_finish.PNG)
+![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/pcb_notes_.PNG)
 
 ### General Operation
 Honeybees are forced through 24 gates where optical sensors (2 per gate) sense whether the bee is present and determine the direction of the bee movement.  Each optical sensors has an IR LED and an IR sensor. If no bee is present the IR light is absorbed into the black surface. If a bee is present the IR light reflects off the bee back into the sensor. ![https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG)
