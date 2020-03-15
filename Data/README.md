@@ -10,9 +10,9 @@ Possible uses:
 - the expansion or decline of orientation flights over days might signal queen health
 - the time shift between peaks of bees leaving and returning might indicate number of foragers and distance to pollen/nectar source.
 - comparison between two or move hives to test for manipultaions; such as,
--- adding/removing honey supers
--- internal sugar syrup feeding
--- oxalic acid mite treatments
+  - adding/removing honey supers
+  - internal sugar syrup feeding
+  - oxalic acid mite treatments
 - honey bee education or museum type installation
 - introduction to electronics and microControlers
 
