@@ -1,4 +1,4 @@
-# 2019 Easy Bee Counter V.1 (see v.0 here)
+# 2019 Easy Bee Counter V.1
 
 This version of the bee counter is all through hole components which makes for an easy to assemble bee counter. This is the 2nd version of the board (V1) as I made small improvements March 2020.  It's been tested and works with sample code provided.
 
