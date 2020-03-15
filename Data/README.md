@@ -5,7 +5,7 @@ I've got some amazing data over the years but it takes constant calibration for 
  - bearding in the summer evenings and general guard bees mulling about give false triggers
  - direct sun light at a low angle will false trigger sensors (this can be mitigated pretty easily)
 
-Possible uses:
+## Possible uses:
 - the rate of expansion or decline of bee flights might indicate hive health
 - the expansion or decline of orientation flights over days might signal queen health
 - the time shift between peaks of bees leaving and returning might indicate number of foragers and distance to pollen/nectar source.
