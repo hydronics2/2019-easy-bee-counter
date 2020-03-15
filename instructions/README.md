@@ -1,4 +1,4 @@
-# 2019 Easy Bee Counter V.1 Build Instructions (see v.0 here)
+# 2019 Easy Bee Counter V.1 Build Instructions
 
 This version of the bee counter is all through hole components which makes for an easy to assemble bee counter. This is the 2nd version of the board (V1) as I made small improvements March 2020.  I've also tested and posted example code. If you got the [Version 0](https://github.com/hydronics2/2019-easy-bee-counter/tree/b06d461f1881f2709d81f82d817dc76170a77fa7) board (Jan/Feb 2020) you just have to add some jumper wires shown [here](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/archive)
 
