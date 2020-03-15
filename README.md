@@ -31,9 +31,9 @@ Honeybees are forced through 24 gates where optical sensors (2 per gate) sense w
 
 ### uController Pinout
 #### Feather Pinout
-![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/feather_pinout1.PNG)
+![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/feather_pinout2.PNG)
 #### ItsyBitsy Pinout
-![itsy](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/itsy_pinout.PNG)
+![itsy](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/itsy_pinout2.PNG)
 ### Shift-in registers
 There are 6 shift-in registers. Here's a great description for how to connect and program [shift registers](http://www.gammon.com.au/forum/?id=11979).  The uController's SPI pins read the shift registers. All six shift registers are read at the same time. The sensors are normally pulled low and show 3.3V or HIGH when a transistor is triggered and a bee is present.
 
