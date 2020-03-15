@@ -4,7 +4,7 @@ This version of the bee counter is all through hole components which makes for a
 
 The current tested design uses the [Adafruit Feather](https://www.adafruit.com/product/3405) footprint. See here for older V0 instructions.  Adafruit has a ton of options for [Feathers](https://www.adafruit.com/feather?gclid=CjwKCAiA__HvBRACEiwAbViuU4KmYZReV6xjxJxF3YukMTgs1Nm24d_llHE2fEjVRg_X098fisb-hBoCh80QAvD_BwE) but I thought that the wifi esp32, esp8266, or LoRA might be great options.
 
-
+[![Foo](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/bees_flying.PNG)](https://youtu.be/SzXWWUh2k8w)
 
 ### Major Differences/Improvements
 - All through-hole components for easy soldering
@@ -32,8 +32,6 @@ There are 6 shift-in registers. Here's a great description for how to connect an
 
 ### IR LEDs
 There are 48 reflective sensors and each IR sensor has an IR LED. They are divided into two sets of 24 with each set controlled by an N-ch mosfet.  The forward voltage of each IR LED is 1.2V and about 20ma as shown on the [data sheet](https://www.sparkfun.com/datasheets/Robotics/QR_QRE1113.GR.pdf). Two LEDs are connected in series with a 22ohm resistor. There are jumpers on the board that allow the LEDs to be connected directly to GND. Do not make the jumper until fully tested! (refer the directions)[these instructions](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/instructions)
-
-[![Foo](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/bees_flying.PNG)](https://youtu.be/SzXWWUh2k8w)
 
 ### Power
 The PCB design connects the USB power from the uController to the 3.3V regulator so that a usb cable connected to the uController can power the entire project.
