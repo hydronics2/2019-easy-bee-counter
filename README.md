@@ -21,7 +21,7 @@ The current tested design uses the [Adafruit Feather](https://www.adafruit.com/p
 
 
 ### General Operation
-Honeybees are forced through 24 gates where optical sensors (2 per gate) sense whether the bee is present and determine the direction of the bee movement.  Each optical sensors has an IR LED and an IR sensor. If no bee is present the IR light is abosorbed into the black surface. If a bee is present the IR light reflects off the bee back into the sensor. ![https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG)
+Honeybees are forced through 24 gates where optical sensors (2 per gate) sense whether the bee is present and determine the direction of the bee movement.  Each optical sensors has an IR LED and an IR sensor. If no bee is present the IR light is absorbed into the black surface. If a bee is present the IR light reflects off the bee back into the sensor. ![https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG)
 
 ### uController Pinout
 #### Feather Pinout
