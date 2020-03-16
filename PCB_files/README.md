@@ -1,8 +1,8 @@
 ## Printed Circuit Board (PCB)
 
-This PCB version has two footprints that accept Adafruit Feather micro-controllers such as the [esp32](https://www.adafruit.com/product/3405) and add [Adafruit ItsyBitsy](https://www.adafruit.com/category/1008) micro-controllers.
+This PCB version has two footprints that accept the wider (0.8") Adafruit Feather micro-controllers such as the [esp32](https://www.adafruit.com/product/3405) and the narrower (0.6")[Adafruit ItsyBitsy](https://www.adafruit.com/category/1008) micro-controllers.
 
-![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/gerber_feather_1.PNG)
+![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/gerber_feather_2.PNG)
 
 These files were created in Autocad EAGLE PCB software. The zipped files are the gerber files needed by the PCB manufacturer.
 

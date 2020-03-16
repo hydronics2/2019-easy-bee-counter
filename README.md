@@ -9,7 +9,7 @@ The current tested design is easy to program and approachable to beginner progra
 
 ### [Data Analysis - *why count bees?](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/Data/README.md)
 ### [Instructions](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/README.md)
-
+### [Arduino Code](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/arduino/README.md)
 ### Major Differences/Improvements
 - All through-hole components for easy soldering
 - Dual footprint, socketed, off-the-shelf micro-controllers => Feather and ItsyBitsy
@@ -19,7 +19,7 @@ The current tested design is easy to program and approachable to beginner progra
 - using 2 PCBs to create a sandwich is an inexpensive quick solution. The PCBs must be ordered [black](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/instructions/ordering_instructions) so the IR LED emitter is absorbed into the material.
 - using 6 pin headers to create the turn-styles or gates
 - N-Ch mosfet controlled IR LEDs such that LEDs can be controlled ON for short periods during while sensing (~75us). Allows for reduced power to less than 1ma (plus micro-controller).
-![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/gerber_feather_1.PNG)
+![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/gerber_feather_2.PNG)
 ![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/finished.jpg)
 ![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/finished2.jpg)
 ![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/feather_finish.PNG)

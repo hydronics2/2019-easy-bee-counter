@@ -1,11 +1,4 @@
-# Data
-
-I've captured some amazing data over the years. It's possible to calibrate the bee counter to achieve the required repeatability. Some of the obstacles to calibrate for include:
- - although bees don't add propolis to sensors they will spend several days filling voids with propolis upon initial installation
- - bearding in the summer evenings and general guard bees mulling about give false triggers
- - direct sun light at a low angle will false trigger sensors (this can be mitigated pretty easily)
-
-## Possible Uses
+# Possible Uses
 - the rate of expansion or decline of bee flights might indicate hive health
 - the expansion or decline of orientation flights over days might signal queen health
 - the time shift between peaks of bees leaving and returning might indicate number of foragers and distance to pollen/nectar source.
