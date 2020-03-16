@@ -1,6 +1,6 @@
 # 2019 Easy Bee Counter V.1 Build Instructions
 
-This version of the bee counter is all through hole components which makes for an easy to assemble bee counter. This is the 2nd version of the board (V1) as I made small improvements March 2020.  I've also tested and posted example code. If you got the [Version 0](https://github.com/hydronics2/2019-easy-bee-counter/tree/b06d461f1881f2709d81f82d817dc76170a77fa7) board (Jan/Feb 2020) you just have to add some jumper wires shown [here](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/archive)
+This version of the bee counter is all through hole components. It's easy to solder and assemble. This is the 2nd version of the board (V1) completed March 2020. If you got the [Version 0](https://github.com/hydronics2/2019-easy-bee-counter/tree/b06d461f1881f2709d81f82d817dc76170a77fa7) board (Jan/Feb 2020) you just have to fix some of my previous mistakes including adding a jumper wire shown [here](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/archive)
 
 1) Install IR sensors
 
@@ -39,16 +39,16 @@ This version of the bee counter is all through hole components which makes for a
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/10kPullup.PNG)
 
 ## TEST sensors
-Before you go any farther, test all your LEDs/sensors! It's much easier to test them now before going further.
-Run the sample code blink_IR_Leds.
+Before you go any farther, test all your LEDs/sensors! It's much easier to test these now before going further.
+Run the sample code [blink_IR_Leds](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/arduino/Blink_IR_Leds/Blink_IR_Leds.ino).
 
-You cannot see the IR LEDs but many phones and cameras allow you to see the IR LEDs. See picture. (unfortunately most iphones have IR filters so try another phone until you see IR leds).
+The IR LEDs are invisible to the human eye but many phones and cameras allow you to see the IR LEDs. See picture. (unfortunately most iphones have IR filters so try another phone until you see IR leds). This step is very important so make sure you can see all the LEDs.
 
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/ir_sensors_on.PNG)
 
-LEDs look good? If not, are no LEDs lighting up? Check to make sure you have 3.3V on the 3.3V pin header.  Try a camera from an Android phone.  If one or two LEDs is out, reflow your pins and/or replace the LEDs until you get 100% LEDs blinking together.
+LEDs look good? If no LEDs are blinking? Check to make sure you have 3.3V on the 3.3V pin header. If one or two LEDs are out, reflow your pins and/or replace the LEDs until you get 100% LEDs blinking together.
 
-LEDs good, great, next test the shift registers with the sample code test_shift_registers.ino. Use a white piece of paper to trigger the sensors. If some sensors are not working, check your pins, heat up and reflow solder on pins as needed.
+LEDs good, great, next test the shift registers with the sample code [test_shift_registers](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/arduino/test_shift_registers/test_shift_registers.ino). Use a white piece of paper to trigger the sensors. If some sensors are not working, check your pins, heat up and reflow solder on pins as needed.
 
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/serial_output.PNG)
 

@@ -1,20 +1,20 @@
 # Data
 
-I've got some amazing data over the years but it takes constant calibration for a number or reasons
+I've captured some amazing data over the years. It's possible to calibrate the bee counter to achieve the required repeatability. Some of the obstacles to calibrate against include:
  - although bees don't add propolis to sensors they will spend several days filling voids with propolis upon initial installation
  - bearding in the summer evenings and general guard bees mulling about give false triggers
  - direct sun light at a low angle will false trigger sensors (this can be mitigated pretty easily)
 
-## Possible uses:
+## Possible Uses
 - the rate of expansion or decline of bee flights might indicate hive health
 - the expansion or decline of orientation flights over days might signal queen health
 - the time shift between peaks of bees leaving and returning might indicate number of foragers and distance to pollen/nectar source.
-- comparison between two or move hives to test for manipultaions; such as,
+- comparison between two or move hives to test for manipulations; such as,
   - adding/removing honey supers
   - internal sugar syrup feeding
   - oxalic acid mite treatments
 - honey bee education or museum type installation
-- introduction to electronics and microControlers
+- introduction to electronics, soldering and micro-controller programming
 
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/Data/orientation_flights.PNG)
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/Data/forage.PNG)
