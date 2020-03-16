@@ -2,15 +2,21 @@
 
 This version of the bee counter is all through hole components. It's easy to solder and assemble. This is the 2nd version of the board (V1) completed March 2020. If you got the [Version 0](https://github.com/hydronics2/2019-easy-bee-counter/tree/b06d461f1881f2709d81f82d817dc76170a77fa7) board (Jan/Feb 2020) you just have to fix some of my previous mistakes including adding a jumper wire shown [here](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/archive)
 
-1) Install IR sensors
+1) Install IR sensors - [QRE1113](https://www.mouser.com/ProductDetail/512-QRE1113f) or [ITR8307](https://lcsc.com/product-detail/Photo-Interrupter_Everlight-Elec-ITR8307_C63451.html)
 
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/ir_sensors.PNG)
 
 2) install shift registers qty(6), SIP 22R LED resistors and 100k pulldown resistors.
+- Shift registers, qty(6) [74HC165](https://www.mouser.com/ProductDetail/595-CD74HC165E)
 
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/registers.PNG)
+- [22ohm resistors](https://www.mouser.com/ProductDetail/Xicon/266-22-RC?qs=sGAEpiMZZMvrmc6UYKmaNXFefT4dxyTCwtpTxTI0yoo%3D), bussed, qty(4)
+SIP Packaged, bussed
+- [100k ohm resistors](https://www.mouser.com/ProductDetail/IRC-TT-Electronics/L091S104LF?qs=sGAEpiMZZMvrmc6UYKmaNdnTrsZX%2FuSiyGduauH5Qpc%3D) bussed, qty(6)
+SIP-9, 8 resistors, 9 pins
 
 3) install power mosfets qty(2),
+- N-Channel Mosfet [FQP30N06](https://www.mouser.com/ProductDetail/512-FQP30N06L)
 
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/PowerMosfets.PNG)
 
@@ -20,13 +26,19 @@ This version of the bee counter is all through hole components. It's easy to sol
 
 5) place/solder 3.3V power regulator
 
+- [3.3V Regulator](https://www.mouser.com/ProductDetail/Microchip-Technology/MCP1826S-3302E-AB?qs=sGAEpiMZZMsGz1a6aV8DcJ7KfjtCj7Xd5CqQpyOghgk%3D), (input, ground, output - IGO, pinout), qty(1)
+
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/3vRegulator.PNG)
 
 6) install large Capacitor
 
+- [560uF, 6.3V Capacitor](https://www.mouser.com/ProductDetail/661-APSC6R3L561MH08S)
+
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/capacitor.PNG)
 
 7) install green screw terminals, qty(3)
+
+- [screw terminals](https://www.mouser.com/ProductDetail/490-TB006-508-02BE) Two pin, 0.1", qty(3)
 
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/headers.PNG)
 
@@ -34,7 +46,9 @@ This version of the bee counter is all through hole components. It's easy to sol
 
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/uHeaders.PNG)
 
-9) install 10K i2c pullup resistors as needed
+9) install qty(4) 10K Resistors
+- i2c pullup resistors
+- pulldown resistors for power mosfets
 
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/10kPullup.PNG)
 
