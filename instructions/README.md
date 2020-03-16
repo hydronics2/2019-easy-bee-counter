@@ -12,6 +12,7 @@ This version of the bee counter is all through hole components. It's easy to sol
 SIP Packaged, bussed
 - [100k ohm resistors](https://www.mouser.com/ProductDetail/IRC-TT-Electronics/L091S104LF?qs=sGAEpiMZZMvrmc6UYKmaNdnTrsZX%2FuSiyGduauH5Qpc%3D) bussed, qty(6)
 SIP-9, 8 resistors, 9 pins
+
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/registers.PNG)
 
 3) install power mosfets qty(2),
@@ -45,7 +46,7 @@ SIP-9, 8 resistors, 9 pins
 
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/uHeaders.PNG)
 
-9) install qty(4) 10K Resistors
+9) install qty(4) 10K Resistors (picture is wrong.. only shows 2 resistors)
 - i2c pullup resistors
 - pulldown resistors for power mosfets
 
@@ -71,7 +72,10 @@ LEDs good, great, next test the shift registers with the sample code [test_shift
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/finished.jpg)
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/finished2.jpg)
 
-11) Ok, once everything is tested out, you can short these jumpers.... BUT, now we can only turn the LEDs on for 100us. In Arduino that's delayMicroseconds(100).  Any longer and you risk burning out all 48 LEDs.  Making these jumpers increases the throw range of the LEDs.
+
+11) Ok, once everything is tested out, you can solder these jumpers.... Soldering the 24 jumpers increases the throw range of the IR sensors by increasing the forward voltage and current in the LED. This is fine to do if we keep the LEDs ON time to less than 100us.
+
+Two scripts provided, both [test_shift_registers](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/arduino/test_shift_registers/test_shift_registers.ino) and [bee_counting](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/arduino/bee_counting/bee_counting.ino) satisfy this requirement by only turning the LEDs ON for 75us.  This is shown on line 68 (shift register) and line 158 (bee_counting).
 
 Solder all 24 of the jumpers.
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/jumpers.PNG)
