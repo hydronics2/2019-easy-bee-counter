@@ -3,9 +3,9 @@
 There are two test scripts here. One to blink LEDs and one to test shift registers.
 
 ### Warning
-Soldering the 24 jumpers increases the throw range of the IR sensors by increasing the forward voltage and current in the LED. This is fine if we keep the LEDs ON time to less than 100us.
+Soldering the 24 jumpers increases the throw range of the IR sensors by increasing the forward voltage and current in the LED. This is fine if we keep the LEDs ON time to less than 100us. This is described in the [data sheet](https://www.sparkfun.com/datasheets/Robotics/QR_QRE1113.GR.pdf).
 
-Two scripts above, both [test_shift_registers](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/arduino/test_shift_registers/test_shift_registers.ino) and [bee_counting](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/arduino/bee_counting/bee_counting.ino) satisfy this requirement by only turning the LEDs ON for 75us.  This is shown on line 68 (shift register) and line 158 (bee_counting).
+Two scripts above, both [test_shift_registers](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/arduino/test_shift_registers/test_shift_registers.ino) and [bee_counting](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/arduino/bee_counting/bee_counting.ino) satisfy this requirement by only turning the LEDs ON for 75us.  This is shown on line 68 (shift register) and line 158 (bee_counting). Following the ON time there is a delay of ~15-20ms before turning them ON again which preserves the life of the LED.
 
 ### Calibrating the Bee Counter
 I've captured some amazing data over the years. It's possible to calibrate the bee counter to achieve the required repeatability. Some of the obstacles to calibrate for include:
