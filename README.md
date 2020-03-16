@@ -2,7 +2,7 @@
 
 This version of the bee counter is easy to solder and assemble (all through-hole).  It's been tested and works* with sample code provided.
 
-The current tested design is easy to program and approachable to beginner programmers.  The printed circuit board accepts multiple Arduino platforms made by Adafruit including their line of [Adafruit Feather](https://www.adafruit.com/product/3405) type micro-controllers and [Adafruit ItsyBitsy](https://www.adafruit.com/category/1008) micro-controllers.   The Adafruit feathers include wifi and long range radio features (esp8266, esp32, and LoRA). All the ItsyBitsy 3V models (M0, M4, and 32u4) should work fine.
+The current tested design is easy to program and approachable to beginner programmers.  The printed circuit board accepts multiple Arduino platforms made by Adafruit including their line of [Adafruit Feather](https://www.adafruit.com/category/777) type micro-controllers and [Adafruit ItsyBitsy](https://www.adafruit.com/category/1008) micro-controllers.   The Adafruit feathers include wifi and long range radio features (esp8266, esp32, and LoRA). All the ItsyBitsy 3V models (M0, M4, and 32u4) should work fine.
 
 [![Foo](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/bees_flying.PNG)](https://youtu.be/SzXWWUh2k8w)
 
@@ -29,8 +29,8 @@ The current tested design is easy to program and approachable to beginner progra
 ### General Operation
 Honeybees are forced through 24 gates where optical sensors (2 per gate) sense whether the bee is present and determine the direction of the bee movement.  Each optical sensors has an IR LED and an IR sensor. If no bee is present the IR light is absorbed into the black surface. If a bee is present the IR light reflects off the bee back into the sensor. ![https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/IR_photo_diode.PNG)
 
-### uController Pinout
-#### Feather Pinout
+### Micro-Controller Pinout
+#### Feather ESP32 Pinout
 ![feather](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/feather_pinout3.PNG)
 #### ItsyBitsy Pinout
 ![itsy](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/itsy_pinout2.PNG)
@@ -41,11 +41,12 @@ There are 6 shift-in registers. Here's a great description for how to connect an
 There are 48 reflective sensors and each IR sensor has an IR LED. They are divided into two sets of 24 with each set controlled by an N-ch mosfet.  The forward voltage of each IR LED is 1.2V and about 20ma as shown on the [data sheet](https://www.sparkfun.com/datasheets/Robotics/QR_QRE1113.GR.pdf). Two LEDs are connected in series with a 22ohm resistor. There are jumpers on the board that allow the LEDs to be connected directly to GND. Do not make the jumper until fully tested! (refer the directions)[these instructions](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/instructions)
 
 ### Power
-The PCB design connects the USB power from the uController to the 3.3V regulator so that a usb cable connected to the uController can power the entire project.
+The PCB design connects the USB power pin from the uController to the 3.3V regulator so that a usb cable connected to the uController can power the entire project.
 
 
 ### Bill of Materials
 #### uController
+The code was tested with the feather esp32 Huzzah and itsyBitsy M0 but will work with all these boards.
 - feather Huzzah from [mouser](https://www.mouser.com/ProductDetail/485-3591)
 - feather esp8266 from [mouser](https://www.mouser.com/ProductDetail/485-2821)
 - feather LoRa 900mhz from [mouser](https://www.mouser.com/ProductDetail/485-3178)
