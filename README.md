@@ -1,14 +1,14 @@
 # 2019 Easy Bee Counter V.1
 
-This version of the bee counter is all through hole components which makes for an easy to assemble bee counter.  It's been tested and works* with sample code provided.
+This version of the bee counter is easy to solder and assemble (all through-hole).  It's been tested and works* with sample code provided.
 
-The current tested design is dual footprint and accepts [Adafruit Feather](https://www.adafruit.com/product/3405) uControllers and [Adafruit ItsyBitsy](https://www.adafruit.com/category/1008) uControllers.   Adafruit has a ton of options for [Feathers](https://www.adafruit.com/feather?gclid=CjwKCAiA__HvBRACEiwAbViuU4KmYZReV6xjxJxF3YukMTgs1Nm24d_llHE2fEjVRg_X098fisb-hBoCh80QAvD_BwE) but I thought that the wifi esp32, esp8266, or LoRA might be great options. All the ItsyBitsy 3V models (M0, M4, and 32u4) should work fine.
+The current tested design is easy to program and approachable to beginner programmers.  The printed circuit board accepts multiple Arduino platforms made by Adafruit including their line of [Adafruit Feather](https://www.adafruit.com/product/3405) type micro-controllers and [Adafruit ItsyBitsy](https://www.adafruit.com/category/1008) micro-controllers.   The Adafruit feathers include wifi and long range radio features (esp8266, esp32, and LoRA). All the ItsyBitsy 3V models (M0, M4, and 32u4) should work fine.
 
 [![Foo](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/bees_flying.PNG)](https://youtu.be/SzXWWUh2k8w)
 
 
-### [*Data Analysis - why count bees?](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/Data)
-
+### [Data Analysis - *why count bees?](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/Data/README.md)
+### [Instructions](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/README.md)
 
 ### Major Differences/Improvements
 - All through-hole components for easy soldering
