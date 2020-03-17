@@ -4,6 +4,8 @@ This version of the bee counter is all through hole components. It's easy to sol
 
 1) Install IR sensors - [QRE1113](https://www.mouser.com/ProductDetail/512-QRE1113f) or [ITR8307](https://lcsc.com/product-detail/Photo-Interrupter_Everlight-Elec-ITR8307_C63451.html)
 
+[![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/LEDs_blinking2.PNG)](https://youtu.be/Xx23OmlHwkE)
+
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/ir_sensors.PNG)
 
 2) install shift registers qty(6), SIP 22R LED resistors and 100k pulldown resistors.
