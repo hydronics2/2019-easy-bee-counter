@@ -58,7 +58,7 @@ Run the sample code [blink_IR_Leds](https://github.com/hydronics2/2019-easy-bee-
 
 The IR LEDs are invisible to the human eye but many phones and cameras allow you to see the IR LEDs. See picture. (unfortunately most iphones have IR filters so try another phone until you see IR leds). This step is very important so make sure you can see all the LEDs.
 
-![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/ir_sensors_on.PNG)
+[![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/LEDs_blinking.PNG)](https://youtu.be/hH9fQr7Om6E)
 
 LEDs look good? If no LEDs are blinking? Check to make sure you have 3.3V on the 3.3V pin header. If one or two LEDs are out, reflow your pins and/or replace the LEDs until you get 100% LEDs blinking together.
 
