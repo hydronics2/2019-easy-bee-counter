@@ -1,6 +1,9 @@
 # Arduino
 
-There are two test scripts here. One to blink LEDs and one to test shift registers.
+There are three arduino scripts attached.
+- Blink_IR_leds.ino - used to visually inspect LEDs working
+- test_shift_registers.ino - used to functionally test sensors
+- bee_counting.ino - used to count bees!
 
 ### Warning
 Soldering the 24 jumpers increases the throw range of the IR sensors by increasing the forward voltage and current in the LED. This is fine if we keep the LEDs ON time to less than 100us. This is described in the [data sheet](https://www.sparkfun.com/datasheets/Robotics/QR_QRE1113.GR.pdf).
