@@ -9,7 +9,7 @@ This version of the bee counter is all through hole components. It's easy to sol
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/instructions/pics/ir_sensors.PNG)
 
 2) install shift registers qty(6), SIP 22R LED resistors and 100k pulldown resistors.
-- Shift registers, qty(6) [74HC165](https://www.mouser.com/ProductDetail/595-CD74HC165E)
+- Shift registers, qty(6) [74HC165](https://www.mouser.com/ProductDetail/595-SN74HC165N)
 - [22ohm resistors](https://www.mouser.com/ProductDetail/Xicon/266-22-RC?qs=sGAEpiMZZMvrmc6UYKmaNXFefT4dxyTCwtpTxTI0yoo%3D), bussed, qty(4)
 SIP Packaged, bussed
 - [100k ohm resistors](https://www.mouser.com/ProductDetail/IRC-TT-Electronics/L091S104LF?qs=sGAEpiMZZMvrmc6UYKmaNdnTrsZX%2FuSiyGduauH5Qpc%3D) bussed, qty(6)
