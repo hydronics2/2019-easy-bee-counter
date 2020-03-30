@@ -19491,11 +19491,11 @@ Please make sure your boards conform to these design rules. 15mill between pads 
 <signal name="13_CATHODE">
 <contactref element="U$91" pad="2"/>
 <contactref element="U$35" pad="P$5"/>
-<wire x1="298.799" y1="23.2266" x2="300.9724" y2="25.4" width="0.2032" layer="16"/>
 <wire x1="307.34" y1="25.4" x2="312.42" y2="30.48" width="0.2032" layer="16"/>
-<wire x1="300.9724" y1="25.4" x2="307.34" y2="25.4" width="0.2032" layer="16"/>
 <via x="300.99" y="25.4" extent="1-16" drill="0.3302"/>
-<wire x1="300.9724" y1="25.4" x2="300.99" y2="25.4" width="0" layer="19" extent="16-16"/>
+<wire x1="298.799" y1="23.2266" x2="300.9724" y2="25.4" width="0.2032" layer="16"/>
+<wire x1="300.9724" y1="25.4" x2="300.99" y2="25.4" width="0.2032" layer="16"/>
+<wire x1="300.99" y1="25.4" x2="307.34" y2="25.4" width="0.2032" layer="16"/>
 </signal>
 <signal name="14_CATHODE">
 <contactref element="U$89" pad="2"/>
@@ -19512,10 +19512,12 @@ Please make sure your boards conform to these design rules. 15mill between pads 
 <signal name="15_CATHODE">
 <contactref element="U$87" pad="2"/>
 <contactref element="U$35" pad="P$3"/>
-<wire x1="324.199" y1="23.2266" x2="317.5" y2="29.9256" width="0.2032" layer="16"/>
-<wire x1="317.5" y1="29.9256" x2="317.5" y2="30.48" width="0.2032" layer="16"/>
 <via x="322.072" y="25.4" extent="1-16" drill="0.3302"/>
-<wire x1="322.072" y1="25.4" x2="324.199" y2="23.2266" width="0" layer="19" extent="1-1"/>
+<wire x1="324.199" y1="23.2266" x2="324.199" y2="23.273" width="0.2032" layer="16"/>
+<wire x1="324.199" y1="23.273" x2="322.072" y2="25.4" width="0.2032" layer="16"/>
+<wire x1="322.072" y1="25.4" x2="321.31" y2="25.4" width="0.2032" layer="16"/>
+<wire x1="321.31" y1="25.4" x2="317.5" y2="29.21" width="0.2032" layer="16"/>
+<wire x1="317.5" y1="29.21" x2="317.5" y2="30.48" width="0.2032" layer="16"/>
 </signal>
 <signal name="16_CATHODE">
 <contactref element="U$85" pad="2"/>
@@ -19529,18 +19531,21 @@ Please make sure your boards conform to these design rules. 15mill between pads 
 <signal name="17_CATHODE">
 <contactref element="U$83" pad="2"/>
 <contactref element="U$34" pad="P$9"/>
-<wire x1="349.599" y1="23.2266" x2="349.599" y2="25.3856" width="0.2032" layer="16"/>
 <wire x1="353.695" y1="31.115" x2="396.24" y2="31.115" width="0.2032" layer="16"/>
 <wire x1="396.24" y1="31.115" x2="398.145" y2="29.21" width="0.2032" layer="16"/>
 <wire x1="398.145" y1="29.21" x2="401.955" y2="29.21" width="0.2032" layer="16"/>
 <wire x1="401.955" y1="29.21" x2="403.225" y2="30.48" width="0.2032" layer="16"/>
-<via x="349.631" y="25.4" extent="1-16" drill="0.3302"/>
-<wire x1="349.631" y1="25.4" x2="349.8723" y2="25.6413" width="0.2032" layer="16"/>
-<wire x1="349.8723" y1="25.6413" x2="349.8992875" y2="25.6413" width="0.2032" layer="16"/>
-<wire x1="349.8992875" y1="25.6413" x2="351.155" y2="26.8970125" width="0.2032" layer="16"/>
 <wire x1="351.155" y1="26.8970125" x2="351.155" y2="28.575" width="0.2032" layer="16"/>
 <wire x1="351.155" y1="28.575" x2="353.695" y2="31.115" width="0.2032" layer="16"/>
-<wire x1="349.599" y1="25.3856" x2="349.631" y2="25.4" width="0" layer="19" extent="16-16"/>
+<via x="349.631" y="25.4" extent="1-16" drill="0.3302"/>
+<wire x1="349.599" y1="23.2266" x2="349.599" y2="25.368" width="0.2032" layer="16"/>
+<wire x1="349.599" y1="25.368" x2="349.631" y2="25.4" width="0.2032" layer="16"/>
+<wire x1="351.1280125" y1="26.8970125" x2="351.155" y2="26.8970125" width="0.2032" layer="16"/>
+<wire x1="349.631" y1="25.4" x2="349.8723" y2="25.6413" width="0.2032" layer="16"/>
+<wire x1="349.8723" y1="25.6413" x2="349.8992875" y2="25.6413" width="0.2032" layer="16"/>
+<wire x1="349.8992875" y1="25.6413" x2="350.2787" y2="26.0207125" width="0.2032" layer="16"/>
+<wire x1="350.2787" y1="26.0207125" x2="350.2787" y2="26.0477" width="0.2032" layer="16"/>
+<wire x1="350.2787" y1="26.0477" x2="351.1280125" y2="26.8970125" width="0.2032" layer="16"/>
 </signal>
 <signal name="18_CATHODE">
 <contactref element="U$81" pad="2"/>
@@ -19563,11 +19568,8 @@ Please make sure your boards conform to these design rules. 15mill between pads 
 <signal name="19_CATHODE">
 <contactref element="U$79" pad="2"/>
 <contactref element="U$34" pad="P$7"/>
-<wire x1="374.999" y1="23.2266" x2="375.126" y2="23.2266" width="0.2032" layer="16"/>
-<wire x1="377.2994" y1="25.4" x2="375.126" y2="23.2266" width="0.2032" layer="16"/>
 <wire x1="405.638" y1="26.543" x2="408.305" y2="29.21" width="0.2032" layer="16"/>
 <wire x1="408.305" y1="29.21" x2="408.305" y2="30.48" width="0.2032" layer="16"/>
-<wire x1="377.2994" y1="25.4" x2="379.73" y2="25.4" width="0.2032" layer="16"/>
 <wire x1="379.73" y1="25.4" x2="383.54" y2="29.21" width="0.2032" layer="16"/>
 <wire x1="383.54" y1="29.21" x2="393.7" y2="29.21" width="0.2032" layer="16"/>
 <wire x1="393.7" y1="29.21" x2="394.97" y2="27.94" width="0.2032" layer="16"/>
@@ -19575,7 +19577,9 @@ Please make sure your boards conform to these design rules. 15mill between pads 
 <wire x1="400.05" y1="27.94" x2="401.447" y2="26.543" width="0.2032" layer="16"/>
 <wire x1="401.447" y1="26.543" x2="405.638" y2="26.543" width="0.2032" layer="16"/>
 <via x="377.317" y="25.4" extent="1-16" drill="0.3302"/>
-<wire x1="377.2994" y1="25.4" x2="377.317" y2="25.4" width="0" layer="19" extent="16-16"/>
+<wire x1="374.999" y1="23.2266" x2="377.1724" y2="25.4" width="0.2032" layer="16"/>
+<wire x1="377.1724" y1="25.4" x2="377.317" y2="25.4" width="0.2032" layer="16"/>
+<wire x1="377.317" y1="25.4" x2="379.73" y2="25.4" width="0.2032" layer="16"/>
 </signal>
 <signal name="20_CATHODE">
 <contactref element="U$77" pad="2"/>
@@ -19880,7 +19884,8 @@ Please make sure your boards conform to these design rules. 15mill between pads 
 <wire x1="127" y1="24.765" x2="139.065" y2="24.765" width="0.6096" layer="16"/>
 <wire x1="140.589" y1="26.289" x2="147.955" y2="26.289" width="0.6096" layer="1"/>
 <via x="139.065" y="24.765" extent="1-16" drill="0.55"/>
-<wire x1="147.955" y1="26.289" x2="161.29" y2="26.289" width="0.6096" layer="1"/>
+<wire x1="147.955" y1="26.289" x2="158.496" y2="26.289" width="0.6096" layer="1"/>
+<wire x1="158.496" y1="26.289" x2="161.29" y2="26.289" width="0.6096" layer="1"/>
 <wire x1="161.29" y1="26.289" x2="173.99" y2="26.289" width="0.6096" layer="1"/>
 <wire x1="173.99" y1="26.289" x2="184.531" y2="26.289" width="0.6096" layer="1"/>
 <wire x1="191.135" y1="26.416" x2="190.246" y2="26.416" width="0.6096" layer="1"/>
@@ -19911,6 +19916,7 @@ Please make sure your boards conform to these design rules. 15mill between pads 
 <via x="259.715" y="26.289" extent="1-16" drill="0.3302"/>
 <via x="271.145" y="26.289" extent="1-16" drill="0.3302"/>
 <via x="273.05" y="26.289" extent="1-16" drill="0.3302"/>
+<via x="158.496" y="26.289" extent="1-16" drill="0.3302"/>
 </signal>
 <signal name="5V">
 <contactref element="J1" pad="2"/>
@@ -20018,9 +20024,6 @@ Please make sure your boards conform to these design rules. 15mill between pads 
 <signal name="1_CATHODE1">
 <via x="158.496" y="25.4" extent="1-16" drill="0.3302"/>
 </signal>
-<signal name="N$31">
-<via x="158.496" y="26.289" extent="1-16" drill="0.3302"/>
-</signal>
 </signals>
 <mfgpreviewcolors>
 <mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
@@ -20030,13 +20033,13 @@ Please make sure your boards conform to these design rules. 15mill between pads 
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
 <errors>
-<approved hash="19,1,9b81190b6b2486f4"/>
-<approved hash="19,1,21a240a90da63dae"/>
 <approved hash="19,1,adb7530152d153fc"/>
 <approved hash="19,1,b761dfd2b4e023c8"/>
 <approved hash="19,1,74087bc918cf170e"/>
 <approved hash="19,1,4484b4ae1b6ee484"/>
 <approved hash="19,1,abf594e38b5008d5"/>
+<approved hash="19,1,8005702f40efbf05"/>
+<approved hash="19,1,c7dac7a7d9358a89"/>
 </errors>
 </board>
 </drawing>
