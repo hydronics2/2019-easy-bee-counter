@@ -118,11 +118,6 @@ void setup ()
   pinMode (LATCH, OUTPUT);
   digitalWrite (LATCH, HIGH);
 
-  pinMode (chipSelect1, OUTPUT);
-  digitalWrite(chipSelect1, LOW);
-  pinMode (chipSelect2, OUTPUT);
-  digitalWrite(chipSelect2, LOW);
-
   pinMode (powerGates1, OUTPUT);
   digitalWrite(powerGates1, LOW);
   pinMode (powerGates2, OUTPUT);
