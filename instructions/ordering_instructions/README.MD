@@ -2,7 +2,7 @@
 
 There are a lot of different PCB manufacturers to choose from. These instructions show JLCPCB. You need a manufacturer that can make black PCBs if you want to use the PCBs to make a sandwich. The IR LEDs/sensors need to point to a black surface to prevent false triggers, so the bottom PCB has to be black.
 
-1. Download the [zipped gerber files](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/PCB_files)... Right click and 'save link as' to download "gerbers.zip"
+1. Download the entire repo... hit the large green button that says "clone or download" [github](https://github.com/hydronics2/2019-easy-bee-counter)... navigate to the "gerbers.zip" file under the PCB folder.
 2. Go to [JLCPCB.com](https://jlcpcb.com/quote#/), create an account and click the ORDER NOW button.
 3. Click on the "Add Your Gerber File" and upload the ziped files
 ![pic](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/JLCPCB_order2.PNG)
