@@ -1,5 +1,5 @@
 /*
- * featherhuzzah_bee_countingWiFi
+ * featherhuzzah_bee_counter_WiFi
  * Andrew Wootton 5/5/2020
  * main code is directly from https://github.com/hydronics2/2019-easy-bee-counter/blob/master/arduino/bee_counting/bee_counting.ino 
  * only addition is to add WiFi connection and send to ThingSpeak for display/storage (copied from example https://github.com/mathworks/thingspeak-arduino/tree/master/examples/ESP32/WriteMultipleFields)
