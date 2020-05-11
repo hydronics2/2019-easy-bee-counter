@@ -29638,10 +29638,10 @@ https://www.mouser.com/ProductDetail/661-APSC6R3L561MH08S
 <text x="-195.58" y="1000.76" size="1.778" layer="91">Shift-IN</text>
 <text x="-195.58" y="993.14" size="1.778" layer="91">Shift-IN</text>
 <text x="-195.58" y="995.68" size="1.778" layer="91">Shift-IN</text>
+<text x="-274.32" y="998.22" size="1.778" layer="91" align="bottom-right">LED Power</text>
 <text x="-274.32" y="995.68" size="1.778" layer="91" align="bottom-right">LED Power</text>
-<text x="-274.32" y="993.14" size="1.778" layer="91" align="bottom-right">LED Power</text>
-<text x="-274.32" y="1003.3" size="1.778" layer="91" align="bottom-right">SCREW Term.</text>
-<text x="-274.32" y="1000.76" size="1.778" layer="91" align="bottom-right">SCREW Term.</text>
+<text x="-274.32" y="1008.38" size="1.778" layer="91" align="bottom-right">SCREW Term.</text>
+<text x="-274.32" y="1005.84" size="1.778" layer="91" align="bottom-right">SCREW Term.</text>
 <text x="-182.88" y="990.6" size="1.778" layer="91" align="bottom-right">SCREW Term.</text>
 <text x="-246.38" y="922.02" size="1.778" layer="91" align="bottom-right">SCREW Term.</text>
 <text x="-218.44" y="922.02" size="1.778" layer="91" align="bottom-right">SCREW Term.</text>
@@ -32173,11 +32173,9 @@ Thomas Hudson</text>
 </net>
 <net name="SCL" class="0">
 <segment>
-<label x="-271.78" y="1000.76" size="1.778" layer="95"/>
-<wire x1="-269.24" y1="1000.76" x2="-259.08" y2="1000.76" width="0.1524" layer="91"/>
-<wire x1="-259.08" y1="1000.76" x2="-259.08" y2="1005.84" width="0.1524" layer="91"/>
+<label x="-271.78" y="1005.84" size="1.778" layer="95"/>
+<wire x1="-269.24" y1="1005.84" x2="-254" y2="1005.84" width="0.1524" layer="91"/>
 <pinref part="MS2" gate="G$1" pin="GPIOSCL"/>
-<wire x1="-259.08" y1="1005.84" x2="-254" y2="1005.84" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="2"/>
@@ -32721,11 +32719,9 @@ Thomas Hudson</text>
 </net>
 <net name="P1" class="0">
 <segment>
-<label x="-271.78" y="995.68" size="1.778" layer="95"/>
-<wire x1="-269.24" y1="995.68" x2="-261.62" y2="995.68" width="0.1524" layer="91"/>
-<wire x1="-261.62" y1="995.68" x2="-261.62" y2="998.22" width="0.1524" layer="91"/>
+<label x="-271.78" y="998.22" size="1.778" layer="95"/>
 <pinref part="MS2" gate="G$1" pin="GPIO9"/>
-<wire x1="-261.62" y1="998.22" x2="-254" y2="998.22" width="0.1524" layer="91"/>
+<wire x1="-269.24" y1="998.22" x2="-254" y2="998.22" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="Q7" gate="NMOS" pin="G"/>
@@ -32745,11 +32741,9 @@ Thomas Hudson</text>
 </net>
 <net name="SDA" class="0">
 <segment>
-<wire x1="-261.62" y1="1003.3" x2="-269.24" y2="1003.3" width="0.1524" layer="91"/>
-<label x="-271.78" y="1003.3" size="1.778" layer="95"/>
+<label x="-271.78" y="1008.38" size="1.778" layer="95"/>
 <pinref part="MS2" gate="G$1" pin="GPIOSDA"/>
-<wire x1="-261.62" y1="1003.3" x2="-261.62" y2="1008.38" width="0.1524" layer="91"/>
-<wire x1="-261.62" y1="1008.38" x2="-254" y2="1008.38" width="0.1524" layer="91"/>
+<wire x1="-269.24" y1="1008.38" x2="-254" y2="1008.38" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="1"/>
@@ -32812,11 +32806,9 @@ Thomas Hudson</text>
 </net>
 <net name="P2" class="0">
 <segment>
-<label x="-271.78" y="993.14" size="1.778" layer="95"/>
+<label x="-271.78" y="995.68" size="1.778" layer="95"/>
 <pinref part="MS2" gate="G$1" pin="GPIO10"/>
-<wire x1="-254" y1="995.68" x2="-259.08" y2="995.68" width="0.1524" layer="91"/>
-<wire x1="-259.08" y1="995.68" x2="-259.08" y2="993.14" width="0.1524" layer="91"/>
-<wire x1="-259.08" y1="993.14" x2="-269.24" y2="993.14" width="0.1524" layer="91"/>
+<wire x1="-254" y1="995.68" x2="-269.24" y2="995.68" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <wire x1="-213.36" y1="1054.1" x2="-208.28" y2="1054.1" width="0.1524" layer="91"/>
@@ -32841,14 +32833,14 @@ Thomas Hudson</text>
 <label x="-347.98" y="812.8" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="MS2" gate="G$1" pin="GPIOA2"/>
-<wire x1="-210.82" y1="985.52" x2="-185.42" y2="985.52" width="0.1524" layer="91"/>
-<label x="-200.66" y="985.52" size="1.778" layer="95"/>
+<label x="-271.78" y="1003.3" size="1.778" layer="95"/>
+<pinref part="MS2" gate="G$1" pin="GPIO5"/>
+<wire x1="-254" y1="1003.3" x2="-269.24" y2="1003.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$45" gate="G$1" pin="A2"/>
-<wire x1="-246.38" y1="1051.56" x2="-254" y2="1051.56" width="0.1524" layer="91"/>
-<label x="-254" y="1051.56" size="1.778" layer="95"/>
+<label x="-213.36" y="1043.94" size="1.778" layer="95"/>
+<pinref part="U$45" gate="G$1" pin="D5"/>
+<wire x1="-213.36" y1="1043.94" x2="-203.2" y2="1043.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SRVO2" class="0">
@@ -32892,9 +32884,9 @@ Thomas Hudson</text>
 <label x="-213.36" y="1049.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="MS2" gate="G$1" pin="GPIO12"/>
-<wire x1="-254" y1="990.6" x2="-269.24" y2="990.6" width="0.1524" layer="91"/>
-<label x="-271.78" y="990.6" size="1.778" layer="95"/>
+<label x="-271.78" y="993.14" size="1.778" layer="95"/>
+<pinref part="MS2" gate="G$1" pin="GPIO11"/>
+<wire x1="-254" y1="993.14" x2="-269.24" y2="993.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SERVO5" gate="A" pin="3"/>
