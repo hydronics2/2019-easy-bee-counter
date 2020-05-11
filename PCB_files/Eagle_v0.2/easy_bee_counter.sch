@@ -3,7 +3,7 @@
 <eagle version="9.6.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
@@ -31750,21 +31750,29 @@ Thomas Hudson</text>
 <net name="SNS16O" class="0">
 <segment>
 <wire x1="-50.8" y1="756.92" x2="-50.8" y2="871.22" width="0.1524" layer="91"/>
-<wire x1="-50.8" y1="871.22" x2="-175.26" y2="871.22" width="0.1524" layer="91"/>
+<wire x1="-50.8" y1="871.22" x2="-91.44" y2="871.22" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="8"/>
 <label x="-142.24" y="871.22" size="1.778" layer="95"/>
 <pinref part="U3" gate="U1" pin="B"/>
+<wire x1="-91.44" y1="871.22" x2="-175.26" y2="871.22" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="756.92" x2="-27.94" y2="756.92" width="0.1524" layer="91"/>
+<pinref part="U16O" gate="G$1" pin="E"/>
+<wire x1="-91.44" y1="878.84" x2="-91.44" y2="871.22" width="0.1524" layer="91"/>
+<junction x="-91.44" y="871.22"/>
 </segment>
 </net>
 <net name="SNS16I" class="0">
 <segment>
 <wire x1="-48.26" y1="873.76" x2="-48.26" y2="754.38" width="0.1524" layer="91"/>
-<wire x1="-175.26" y1="873.76" x2="-48.26" y2="873.76" width="0.1524" layer="91"/>
+<wire x1="-175.26" y1="873.76" x2="-109.22" y2="873.76" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="9"/>
 <label x="-142.24" y="873.76" size="1.778" layer="95"/>
 <pinref part="U3" gate="U1" pin="A"/>
+<wire x1="-109.22" y1="873.76" x2="-48.26" y2="873.76" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="754.38" x2="-27.94" y2="754.38" width="0.1524" layer="91"/>
+<pinref part="U16I" gate="G$1" pin="E"/>
+<wire x1="-109.22" y1="878.84" x2="-109.22" y2="873.76" width="0.1524" layer="91"/>
+<junction x="-109.22" y="873.76"/>
 </segment>
 </net>
 <net name="SNS15O" class="0">
@@ -31834,11 +31842,15 @@ Thomas Hudson</text>
 <net name="SNS20O" class="0">
 <segment>
 <wire x1="-48.26" y1="919.48" x2="-48.26" y2="1038.86" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="1038.86" x2="-172.72" y2="1038.86" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="1038.86" x2="-91.44" y2="1038.86" width="0.1524" layer="91"/>
 <pinref part="R5" gate="G$1" pin="8"/>
 <label x="-142.24" y="1038.86" size="1.778" layer="95"/>
 <pinref part="U2" gate="U1" pin="B"/>
+<wire x1="-91.44" y1="1038.86" x2="-172.72" y2="1038.86" width="0.1524" layer="91"/>
 <wire x1="-48.26" y1="919.48" x2="-30.48" y2="919.48" width="0.1524" layer="91"/>
+<pinref part="U20O" gate="G$1" pin="E"/>
+<wire x1="-91.44" y1="1046.48" x2="-91.44" y2="1038.86" width="0.1524" layer="91"/>
+<junction x="-91.44" y="1038.86"/>
 </segment>
 </net>
 <net name="SNS19O" class="0">
@@ -31937,7 +31949,8 @@ Thomas Hudson</text>
 </net>
 <net name="SNS24O" class="0">
 <segment>
-<wire x1="-144.78" y1="1188.72" x2="-50.8" y2="1188.72" width="0.1524" layer="91"/>
+<wire x1="-144.78" y1="1188.72" x2="-91.44" y2="1188.72" width="0.1524" layer="91"/>
+<wire x1="-91.44" y1="1188.72" x2="-50.8" y2="1188.72" width="0.1524" layer="91"/>
 <wire x1="-50.8" y1="1074.42" x2="-50.8" y2="1188.72" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="8"/>
 <wire x1="-144.78" y1="1181.1" x2="-144.78" y2="1188.72" width="0.1524" layer="91"/>
@@ -31945,11 +31958,15 @@ Thomas Hudson</text>
 <label x="-137.16" y="1188.72" size="1.778" layer="95"/>
 <pinref part="U1" gate="U1" pin="B"/>
 <wire x1="-50.8" y1="1074.42" x2="-30.48" y2="1074.42" width="0.1524" layer="91"/>
+<pinref part="U24O" gate="G$1" pin="E"/>
+<wire x1="-91.44" y1="1196.34" x2="-91.44" y2="1188.72" width="0.1524" layer="91"/>
+<junction x="-91.44" y="1188.72"/>
 </segment>
 </net>
 <net name="SNS23O" class="0">
 <segment>
-<wire x1="-152.4" y1="1155.7" x2="-55.88" y2="1155.7" width="0.1524" layer="91"/>
+<wire x1="-152.4" y1="1155.7" x2="-91.44" y2="1155.7" width="0.1524" layer="91"/>
+<wire x1="-91.44" y1="1155.7" x2="-55.88" y2="1155.7" width="0.1524" layer="91"/>
 <wire x1="-55.88" y1="1079.5" x2="-55.88" y2="1155.7" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="6"/>
 <wire x1="-152.4" y1="1155.7" x2="-152.4" y2="1176.02" width="0.1524" layer="91"/>
@@ -31957,18 +31974,25 @@ Thomas Hudson</text>
 <label x="-137.16" y="1155.7" size="1.778" layer="95"/>
 <pinref part="U1" gate="U1" pin="D"/>
 <wire x1="-55.88" y1="1079.5" x2="-30.48" y2="1079.5" width="0.1524" layer="91"/>
+<pinref part="U23O" gate="G$1" pin="E"/>
+<wire x1="-91.44" y1="1163.32" x2="-91.44" y2="1155.7" width="0.1524" layer="91"/>
+<junction x="-91.44" y="1155.7"/>
 </segment>
 </net>
 <net name="SNS23I" class="0">
 <segment>
 <wire x1="-53.34" y1="1158.24" x2="-53.34" y2="1076.96" width="0.1524" layer="91"/>
-<wire x1="-53.34" y1="1158.24" x2="-149.86" y2="1158.24" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="1158.24" x2="-109.22" y2="1158.24" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="7"/>
+<wire x1="-109.22" y1="1158.24" x2="-149.86" y2="1158.24" width="0.1524" layer="91"/>
 <wire x1="-170.18" y1="1178.56" x2="-149.86" y2="1178.56" width="0.1524" layer="91"/>
 <wire x1="-149.86" y1="1178.56" x2="-149.86" y2="1158.24" width="0.1524" layer="91"/>
 <label x="-137.16" y="1158.24" size="1.778" layer="95"/>
 <pinref part="U1" gate="U1" pin="C"/>
 <wire x1="-53.34" y1="1076.96" x2="-30.48" y2="1076.96" width="0.1524" layer="91"/>
+<pinref part="U23I" gate="G$1" pin="E"/>
+<wire x1="-109.22" y1="1163.32" x2="-109.22" y2="1158.24" width="0.1524" layer="91"/>
+<junction x="-109.22" y="1158.24"/>
 </segment>
 </net>
 <net name="SNS21I" class="0">
@@ -32456,23 +32480,31 @@ Thomas Hudson</text>
 <net name="SNS20I" class="0">
 <segment>
 <wire x1="-45.72" y1="1041.4" x2="-45.72" y2="916.94" width="0.1524" layer="91"/>
-<wire x1="-45.72" y1="1041.4" x2="-172.72" y2="1041.4" width="0.1524" layer="91"/>
+<wire x1="-45.72" y1="1041.4" x2="-109.22" y2="1041.4" width="0.1524" layer="91"/>
 <pinref part="R5" gate="G$1" pin="9"/>
 <label x="-142.24" y="1041.4" size="1.778" layer="95"/>
 <pinref part="U2" gate="U1" pin="A"/>
+<wire x1="-109.22" y1="1041.4" x2="-172.72" y2="1041.4" width="0.1524" layer="91"/>
 <wire x1="-45.72" y1="916.94" x2="-30.48" y2="916.94" width="0.1524" layer="91"/>
+<pinref part="U20I" gate="G$1" pin="E"/>
+<wire x1="-109.22" y1="1046.48" x2="-109.22" y2="1041.4" width="0.1524" layer="91"/>
+<junction x="-109.22" y="1041.4"/>
 </segment>
 </net>
 <net name="SNS24I" class="0">
 <segment>
 <wire x1="-48.26" y1="1191.26" x2="-48.26" y2="1071.88" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="1191.26" x2="-147.32" y2="1191.26" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="1191.26" x2="-109.22" y2="1191.26" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="9"/>
+<wire x1="-109.22" y1="1191.26" x2="-147.32" y2="1191.26" width="0.1524" layer="91"/>
 <wire x1="-170.18" y1="1183.64" x2="-147.32" y2="1183.64" width="0.1524" layer="91"/>
 <wire x1="-147.32" y1="1183.64" x2="-147.32" y2="1191.26" width="0.1524" layer="91"/>
 <label x="-137.16" y="1191.26" size="1.778" layer="95"/>
 <pinref part="U1" gate="U1" pin="A"/>
 <wire x1="-48.26" y1="1071.88" x2="-30.48" y2="1071.88" width="0.1524" layer="91"/>
+<pinref part="U24I" gate="G$1" pin="E"/>
+<wire x1="-109.22" y1="1196.34" x2="-109.22" y2="1191.26" width="0.1524" layer="91"/>
+<junction x="-109.22" y="1191.26"/>
 </segment>
 </net>
 <net name="PWR_13-24" class="0">
@@ -32514,6 +32546,7 @@ Thomas Hudson</text>
 <pinref part="U5" gate="U1" pin="QH"/>
 <wire x1="5.08" y1="436.88" x2="-5.08" y2="436.88" width="0.1524" layer="91"/>
 <label x="5.08" y="274.32" size="1.778" layer="95"/>
+<label x="5.08" y="360.68" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SER2" class="0">
@@ -32524,19 +32557,20 @@ Thomas Hudson</text>
 <pinref part="U4" gate="U1" pin="QH"/>
 <wire x1="-7.62" y1="591.82" x2="0" y2="591.82" width="0.1524" layer="91"/>
 <label x="2.54" y="449.58" size="1.778" layer="95"/>
+<label x="0" y="500.38" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SER3" class="0">
+<net name="SER4" class="0">
 <segment>
 <pinref part="U3" gate="U1" pin="SER"/>
 <wire x1="-7.62" y1="764.54" x2="2.54" y2="764.54" width="0.1524" layer="91"/>
 <wire x1="2.54" y1="764.54" x2="2.54" y2="929.64" width="0.1524" layer="91"/>
 <pinref part="U2" gate="U1" pin="QH"/>
 <wire x1="2.54" y1="929.64" x2="-10.16" y2="929.64" width="0.1524" layer="91"/>
-<label x="5.08" y="769.62" size="1.778" layer="95"/>
+<label x="2.54" y="802.64" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="SER4" class="0">
+<net name="SER5" class="0">
 <segment>
 <pinref part="U2" gate="U1" pin="SER"/>
 <wire x1="-10.16" y1="927.1" x2="0" y2="927.1" width="0.1524" layer="91"/>
@@ -32765,7 +32799,7 @@ Thomas Hudson</text>
 <pinref part="U$45" gate="G$1" pin="USB"/>
 </segment>
 </net>
-<net name="N$28" class="0">
+<net name="SER3" class="0">
 <segment>
 <pinref part="U4" gate="U1" pin="SER"/>
 <wire x1="-7.62" y1="589.28" x2="2.54" y2="589.28" width="0.1524" layer="91"/>
@@ -32802,11 +32836,6 @@ Thomas Hudson</text>
 </net>
 <net name="SRVO3" class="0">
 <segment>
-<pinref part="U$45" gate="G$1" pin="A3"/>
-<wire x1="-246.38" y1="1049.02" x2="-254" y2="1049.02" width="0.1524" layer="91"/>
-<label x="-254" y="1049.02" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="SERVO3" gate="A" pin="3"/>
 <wire x1="-347.98" y1="830.58" x2="-347.98" y2="807.72" width="0.1524" layer="91"/>
 <label x="-347.98" y="812.8" size="1.778" layer="95" rot="R90"/>
@@ -32816,13 +32845,13 @@ Thomas Hudson</text>
 <wire x1="-210.82" y1="985.52" x2="-185.42" y2="985.52" width="0.1524" layer="91"/>
 <label x="-200.66" y="985.52" size="1.778" layer="95"/>
 </segment>
-</net>
-<net name="SRVO2" class="0">
 <segment>
 <pinref part="U$45" gate="G$1" pin="A2"/>
 <wire x1="-246.38" y1="1051.56" x2="-254" y2="1051.56" width="0.1524" layer="91"/>
 <label x="-254" y="1051.56" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="SRVO2" class="0">
 <segment>
 <pinref part="MS2" gate="G$1" pin="GPIOA1"/>
 <wire x1="-210.82" y1="982.98" x2="-185.42" y2="982.98" width="0.1524" layer="91"/>
@@ -32832,6 +32861,11 @@ Thomas Hudson</text>
 <pinref part="SERVO2" gate="A" pin="3"/>
 <wire x1="-335.28" y1="830.58" x2="-335.28" y2="807.72" width="0.1524" layer="91"/>
 <label x="-335.28" y="812.8" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="U$45" gate="G$1" pin="A1"/>
+<wire x1="-246.38" y1="1054.1" x2="-254" y2="1054.1" width="0.1524" layer="91"/>
+<label x="-254" y="1054.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SRVO4" class="0">
@@ -32870,11 +32904,6 @@ Thomas Hudson</text>
 </net>
 <net name="SRVO1" class="0">
 <segment>
-<pinref part="U$45" gate="G$1" pin="A1"/>
-<wire x1="-246.38" y1="1054.1" x2="-254" y2="1054.1" width="0.1524" layer="91"/>
-<label x="-254" y="1054.1" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="MS2" gate="G$1" pin="GPIOA0"/>
 <wire x1="-210.82" y1="980.44" x2="-185.42" y2="980.44" width="0.1524" layer="91"/>
 <label x="-200.66" y="980.44" size="1.778" layer="95"/>
@@ -32883,6 +32912,11 @@ Thomas Hudson</text>
 <pinref part="SERVO1" gate="A" pin="3"/>
 <wire x1="-322.58" y1="830.58" x2="-322.58" y2="807.72" width="0.1524" layer="91"/>
 <label x="-322.58" y="812.8" size="1.778" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="U$45" gate="G$1" pin="A(0)"/>
+<wire x1="-246.38" y1="1056.64" x2="-254" y2="1056.64" width="0.1524" layer="91"/>
+<label x="-254" y="1056.64" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SNS02O" class="0">
@@ -33057,15 +33091,15 @@ Thomas Hudson</text>
 <approved hash="101,1,-220.98,731.52,U$59,6,,,,"/>
 <approved hash="101,1,-304.8,690.88,U$60,1,,,,"/>
 <approved hash="101,1,-292.1,690.88,U$61,1,,,,"/>
-<approved hash="202,1,-10.16,1097.28,U1,!QH,,,,"/>
-<approved hash="202,1,-10.16,1092.2,U1,SER,,,,"/>
-<approved hash="104,1,-10.16,1079.5,U1,VCC,3.3V,,,"/>
-<approved hash="202,1,-10.16,942.34,U2,!QH,,,,"/>
-<approved hash="104,1,-10.16,924.56,U2,VCC,3.3V,,,"/>
-<approved hash="202,1,-7.62,767.08,U3,!QH,,,,"/>
-<approved hash="104,1,-7.62,749.3,U3,VCC,3.3V,,,"/>
-<approved hash="202,1,-7.62,604.52,U4,!QH,,,,"/>
-<approved hash="104,1,-7.62,586.74,U4,VCC,3.3V,,,"/>
+<approved hash="202,1,-10.16,1087.12,U1,!QH,,,,"/>
+<approved hash="202,1,-10.16,1082.04,U1,SER,,,,"/>
+<approved hash="104,1,-10.16,1069.34,U1,VCC,3.3V,,,"/>
+<approved hash="202,1,-10.16,932.18,U2,!QH,,,,"/>
+<approved hash="104,1,-10.16,914.4,U2,VCC,3.3V,,,"/>
+<approved hash="202,1,-7.62,769.62,U3,!QH,,,,"/>
+<approved hash="104,1,-7.62,751.84,U3,VCC,3.3V,,,"/>
+<approved hash="202,1,-7.62,594.36,U4,!QH,,,,"/>
+<approved hash="104,1,-7.62,576.58,U4,VCC,3.3V,,,"/>
 <approved hash="202,1,-5.08,439.42,U5,!QH,,,,"/>
 <approved hash="104,1,-5.08,421.64,U5,VCC,3.3V,,,"/>
 <approved hash="202,1,-5.08,274.32,U6,!QH,,,,"/>
@@ -33073,11 +33107,11 @@ Thomas Hudson</text>
 <approved hash="202,1,-210.82,970.28,MS2,!RESET,,,,"/>
 <approved hash="117,1,-210.82,972.82,3V,,,,,"/>
 <approved hash="117,1,-254,980.44,VBAT,,,,,"/>
-<approved hash="113,1,-372.053,834.586,SERVO5,,,,,"/>
-<approved hash="113,1,-359.353,834.586,SERVO4,,,,,"/>
-<approved hash="113,1,-346.653,834.586,SERVO3,,,,,"/>
-<approved hash="113,1,-333.953,834.586,SERVO2,,,,,"/>
-<approved hash="113,1,-321.253,834.586,SERVO1,,,,,"/>
+<approved hash="113,1,-372.279,834.521,SERVO5,,,,,"/>
+<approved hash="113,1,-359.579,834.521,SERVO4,,,,,"/>
+<approved hash="113,1,-346.879,834.521,SERVO3,,,,,"/>
+<approved hash="113,1,-334.179,834.521,SERVO2,,,,,"/>
+<approved hash="113,1,-321.479,834.521,SERVO1,,,,,"/>
 </errors>
 </schematic>
 </drawing>
