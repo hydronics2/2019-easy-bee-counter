@@ -1,16 +1,18 @@
 /*
  * For more help on reading shift registers: http://www.gammon.com.au/forum/?id=11979
  *  
- * Original design, preserved here for reference:
+ * Gate Map (sensor numbers):
  *   gate     0   ||  1  ||  2  ||  3  ||  4   ||   5  ||  6   ||  7   ||  8   ||  9   ||  10  ||  11  ||  12  ||  13  ||  14  ||  15  ||  16  ||  17  ||  18  ||  19  ||  20  ||  21  ||  22  ||  23
  *   inside   1   ||  3  ||  5  ||  7  ||  9   ||  11  ||  13  ||  15  ||  17  ||  19  ||  21  ||  23  ||  25  ||  27  ||  29  ||  31  ||  33  ||  35  ||  37  ||  39  ||  41  ||  43  ||  45  ||  47
  *   outside  2   ||  4  ||  6  ||  8  ||  10  ||  12  ||  14  ||  16  ||  18  ||  20  ||  22  ||  24  ||  26  ||  28  ||  30  ||  32  ||  34  ||  36  ||  38  ||  40  ||  42  ||  44  ||  46  ||  48
  *
- * New design, simpler PCB layout:
+ * Gate Map (bit numbers):
  *   gate    ||  00  ||  01  ||  02  ||  03  ||  04  ||  05  ||  06  ||  07  ||  08  ||  09  ||  10  ||  11  ||  12  ||  13  ||  14  ||  15  ||  16  ||  17  ||  18  ||  19  ||  20  ||  21  ||  22  ||  23  ||
  *   inside  ||   5  ||   7  ||   2  ||   0  ||  13  ||  15  ||  10  ||   8  ||  21  ||  23  ||  18  ||  16  ||  29  ||  31  ||  26  ||  24  ||  37  ||  39  ||  34  ||  32  ||  45  ||  47  ||  42  ||  40  ||
  *   outside ||   4  ||   6  ||   3  ||   1  ||  12  ||  14  ||  11  ||   9  ||  20  ||  22  ||  19  ||  17  ||  28  ||  30  ||  27  ||  25  ||  36  ||  38  ||  35  ||  33  ||  44  ||  46  ||  43  ||  41  ||
  *
+ * The bit numbers map is layed out such that bits 0-7 map to the bits with values 2^0 through 2^7 respectively in the first octet transferred.
+ * Bits 8-15 map similarly onto the second octet and so on.
  * 
  *  HOW long can we drive the LEDs ON without current limiting resistors?
  *  LED timed pulse (tp) allowance vs period (T)
