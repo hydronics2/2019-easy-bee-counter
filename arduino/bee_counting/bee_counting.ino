@@ -33,8 +33,11 @@
  *  It takes a honey bee around 250ms to traverse the sensor This code only looks for honeybees moving faster than 650ms.
  *  
  */
+#define REV	1
+
 
 // Map of sensor number onto input pin on shift register (sensor number % 8 = pin number, int(sensor number / 8) = shift register number)
+#if REV >= 2
 uint8_t gatemap[] = {
 	0b00100000,	// Gate 0 (1I)
 	0b00010000,	// Gate 1 (1O)
@@ -45,6 +48,18 @@ uint8_t gatemap[] = {
 	0b00000001,	// Gate 6 (4I)
 	0b00000010,	// Gate 7 (4O)
 };
+#else
+uint8_t gatemap[] = {
+        0b00000001,     // Gate 0 (1I)
+        0b00000010,     // Gate 1 (1O)
+        0b00000100,     // Gate 2 (2I)
+        0b00001000,     // Gate 3 (2O)
+        0b00010000,     // Gate 4 (3I)
+        0b00100000,     // Gate 5 (3O)
+        0b01000000,     // Gate 6 (4I)
+        0b10000000,     // Gate 7 (4O)
+};
+#endif
 
 #include <SPI.h>
 
@@ -200,7 +215,7 @@ void loop ()
   //Reading 24 bits at 1Mhz should take about 24 microseconds,
   //reading 24 bits at 3Mhz should take about 8us
   //reading 48 bits at 3Mhz should take abotu 16us
-  (void) SPI.transfer(switchBank, (numberOfGates / 4));
+  (void) SPI.transfer((uint8_t *)switchBank, (uint32_t)(numberOfGates / 4));
  
   
   
