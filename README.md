@@ -2,7 +2,9 @@
 
 This version of the bee counter is easy to solder and assemble (all through-hole).  It's been tested and works* with sample code provided.
 
-The current tested design is easy to program and approachable to beginner programmers.  The printed circuit board accepts multiple Arduino platforms made by Adafruit including their line of [Adafruit Feather](https://www.adafruit.com/category/777) type micro-controllers and [Adafruit ItsyBitsy](https://www.adafruit.com/category/1008) micro-controllers.   The Adafruit feathers include wifi and long range radio features (esp8266, esp32, and LoRA). All the ItsyBitsy 3V models (M0, M4, and 32u4) should work fine.
+The current tested design is easy to program and approachable to beginner programmers.  The printed circuit board accepts multiple Arduino platforms made by Adafruit including their line of [Adafruit Feather](https://www.adafruit.com/category/777) type micro-controllers and [Adafruit ItsyBitsy](https://www.adafruit.com/category/1008) micro-controllers.   The Adafruit feathers include wifi and long range radio features (*esp8266, esp32, and LoRA). All the ItsyBitsy 3V models (M0, M4, and 32u4) should work fine.
+
+*the esp8266 is missing A5 so you have to jumper to another pin if you use it
 
 [![Foo](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/bees_flying.PNG)](https://youtu.be/SzXWWUh2k8w)
 
@@ -49,6 +51,7 @@ The PCB design connects the USB power pin from the uController to the 3.3V regul
 The code was tested with the feather esp32 Huzzah and itsyBitsy M0 but will work with all these boards.
 - feather Huzzah from [mouser](https://www.mouser.com/ProductDetail/485-3591)
 - feather esp8266 from [mouser](https://www.mouser.com/ProductDetail/485-2821)
+  - the esp8266 is missing A5, so if this micro is used you have to jumper to another pin
 - feather LoRa 900mhz from [mouser](https://www.mouser.com/ProductDetail/485-3178)
 - ItsyBitsy M0 from [mouser](https://www.mouser.com/ProductDetail/485-3727)
 - ItsyBitsy M4 from [mouser](https://www.mouser.com/ProductDetail/485-3800)
