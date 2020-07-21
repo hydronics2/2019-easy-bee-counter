@@ -19,3 +19,8 @@ I've captured some amazing data over the years. It's possible to calibrate the b
 One method is to measure the speed of the bees movement and only count known movements and throwing out all false triggers. This method misses a lot of bees but can give consistent values. It takes a bee about 180-350ms to traverse the sensor region.
 
 The [bee_counting](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/arduino/bee_counting/bee_counting.ino) code measures the speed of the bees through the sensor and counts bees moving faster than 650ms and demands the time between finishing one sensor and finishing the 2nd sensor is less than 150ms.
+
+
+### Micropython
+
+@jin4 contributed the python code that ran successfully on a pycom device... "This code runs on a pycom device, but i think the code will work on any micropython device since the imports are not pycom specific."
