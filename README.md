@@ -2,9 +2,10 @@
 
 This version of the bee counter is easy to solder and assemble (all through-hole).  It's been tested and works* with sample code provided.
 
-The current tested design is easy to program and approachable to beginner programmers.  The printed circuit board accepts multiple Arduino platforms made by Adafruit including their line of [Adafruit Feather](https://www.adafruit.com/category/777) type micro-controllers and [Adafruit ItsyBitsy](https://www.adafruit.com/category/1008) micro-controllers.   The Adafruit feathers include wifi and long range radio features (*~~esp8266~~, esp32, and LoRA). All the ItsyBitsy 3V models (M0, M4, and 32u4) should work fine.
+The current tested design is easy to program and approachable to beginner programmers.  The printed circuit board accepts multiple Arduino platforms made by Adafruit including their line of [Adafruit Feather](https://www.adafruit.com/category/777) type micro-controllers and [Adafruit ItsyBitsy](https://www.adafruit.com/category/1008) micro-controllers.   The Adafruit feathers include wifi and long range radio features (*~~esp8266~~, esp32, and **LoRA). All the ItsyBitsy 3V models (M0, M4, and 32u4) should work fine.
 
 *the esp8266 is missing A5 so you have to jumper to another pin
+**see below issue with SPI
 
 [![Foo](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/bees_flying.PNG)](https://youtu.be/SzXWWUh2k8w)
 
@@ -38,6 +39,8 @@ Honeybees are forced through 24 gates where optical sensors (48 sensors) determi
 ![itsy](https://github.com/hydronics2/2019-easy-bee-counter/blob/master/pics/itsy_pinout2.PNG)
 ### Shift-in registers
 There are 6 shift-in registers. Here's a great description for how to connect and program [shift registers](http://www.gammon.com.au/forum/?id=11979).  The micro-controller's SPI pins read the shift registers. All six shift registers are read at the same time. The sensors are normally pulled low and show 3.3V or HIGH when a transistor is triggered and a bee is present.
+
+Unfortunately the shift registers we're using (the most popular shift register chip!) are not [full SPI devices](https://electronics.stackexchange.com/questions/121249/how-to-put-a-74hc165-on-an-spi-bus) and wont share the SPI with other devices.. They're like the worst SPI devices!... therefore some boards like the Adalogger or LoRa just wont work out of the box. You can still do it by cutting some traces and patching the SPI lines to free SPI pins and bitbanging the SPI to the shift registers.. buy yeah not optimum. You can get a true-spi shift register but the pinout will be different than the 74hc165 used here.
 
 ### IR LEDs
 The 48 LEDs are divided into two sets of 24 with each set controlled by an N-ch mosfet. The normal forward voltage of each IR LED is 1.2V and about 20ma as shown on the [data sheet](https://www.sparkfun.com/datasheets/Robotics/QR_QRE1113.GR.pdf). Two LEDs are connected in series with a 22ohm resistor. There are jumpers on the board that allow the LEDs to bypass the current limiting resistors. Do not solder the jumper until fully tested! Refer to [these instructions](https://github.com/hydronics2/2019-easy-bee-counter/tree/master/instructions)
