@@ -1,9 +1,14 @@
 /*
  *  
+ * Gate Map (Sensor Numbers)
  *   gate     0   ||  1  ||  2  ||  3  ||  4   ||   5  ||  6   ||  7   ||  8   ||  9   ||  10  ||  11  ||  12  ||  13  ||  14  ||  15  ||  16  ||  17  ||  18  ||  19  ||  20  ||  21  ||  22  ||  23
  *   inside   1   ||  3  ||  5  ||  7  ||  9   ||  11  ||  13  ||  15  ||  17  ||  19  ||  21  ||  23  ||  25  ||  27  ||  29  ||  31  ||  33  ||  35  ||  37  ||  39  ||  41  ||  43  ||  45  ||  47
  *   outside  2   ||  4  ||  6  ||  8  ||  10  ||  12  ||  14  ||  16  ||  18  ||  20  ||  22  ||  24  ||  26  ||  28  ||  30  ||  32  ||  34  ||  36  ||  38  ||  40  ||  42  ||  44  ||  46  ||  48
  * 
+ * Gate Map (bit numbers)
+ *   gate    ||  00  ||  01  ||  02  ||  03  ||  04  ||  05  ||  06  ||  07  ||  08  ||  09  ||  10  ||  11  ||  12  ||  13  ||  14  ||  15  ||  16  ||  17  ||  18  ||  19  ||  20  ||  21  ||  22  ||  23  ||
+ *   inside  ||   5  ||   7  ||   2  ||   0  ||  13  ||  15  ||  10  ||   8  ||  21  ||  23  ||  18  ||  16  ||  29  ||  31  ||  26  ||  24  ||  37  ||  39  ||  34  ||  32  ||  45  ||  47  ||  42  ||  40  ||
+ *   outside ||   4  ||   6  ||   3  ||   1  ||  12  ||  14  ||  11  ||   9  ||  20  ||  22  ||  19  ||  17  ||  28  ||  30  ||  27  ||  25  ||  36  ||  38  ||  35  ||  33  ||  44  ||  46  ||  43  ||  41  ||
  *  
  *  HOW long can we drive the LEDs ON without current limiting resistors?
  *  LED timed pulse (tp) allowance vs period (T)
@@ -13,7 +18,6 @@
  *  So the minimum OFF time between ON times is 7.5ms
  *  This is very conservative as the forward voltage of 3.3v/2 = 1.65v, and max current from the cutsheet is estimated ~170ma 
  *  this is well below the absolute max of 1 amp with which the tp/T ratio was developed for
- *  
  *  
  *  Rough Power Draw with cheap USB current sensor
  *  feather ESP32 by itself with tp/T  15us/2ms => 50ma
@@ -25,39 +29,65 @@
  *  tp/T  15us/8ms  50-60ma had to add 3000uf cap to smooth out drawl
  *  tp/T  15us/10ms  50ma had to add 3000uf cap to smooth out drawl 
  *  
- *  
- *  
- *  
  *  This sketch:
  *  It takes a honey bee around 250ms to traverse the sensor This code only looks for honeybees moving faster than 650ms.
  *  
- *  
- *  
- *  
  */
+#define REV	1
+
+
+// Map of sensor number onto input pin on shift register (sensor number % 8 = pin number, int(sensor number / 8) = shift register number)
+#if REV >= 2
+uint8_t gatemap[] = {
+	0b00100000,	// Gate 0 (1I)
+	0b00010000,	// Gate 1 (1O)
+	0b10000000,	// Gate 2 (2I)
+	0b01000000,	// Gate 3 (2O)
+	0b00000100,	// Gate 4 (3I)
+	0b00001000,	// Gate 5 (3O)
+	0b00000001,	// Gate 6 (4I)
+	0b00000010,	// Gate 7 (4O)
+};
+#else
+uint8_t gatemap[] = {
+        0b00000001,     // Gate 0 (1I)
+        0b00000010,     // Gate 1 (1O)
+        0b00000100,     // Gate 2 (2I)
+        0b00001000,     // Gate 3 (2O)
+        0b00010000,     // Gate 4 (3I)
+        0b00100000,     // Gate 5 (3O)
+        0b01000000,     // Gate 6 (4I)
+        0b10000000,     // Gate 7 (4O)
+};
+#endif
 
 #include <SPI.h>
 
-const int testLed = 13; //onboard LED
-const int LATCH = A5; 
+#define testLed  13 //onboard LED
+#define LATCH    A5 // Shift Register Latch Control Pin
 
+// Use compile-time macrod defined from build.board in boards.txt to determine which board type.
 //Pins Feather ESP32
-const byte powerGates1 = 15;
-const byte powerGates2 = 33;
-
+#if defined ARDUINO_FEATHER_ESP32
+#define powerGates1 15
+#define powerGates2 33
 //Pins ItsyBitsy
-//const byte powerGates1 = 10;
-//const byte powerGates2 = 11;
+#elif defined ARDUINO_ITSYBITSY_M0
+#define powerGates1 10
+#define powerGates2 11
+#else
+#warning Unknown board type, defaulting to ESP32 Feather Pinout
+#define powerGates1 15
+#define powerGates2 33
+#endif
 
-
-const int numberOfGates = 24; // 24 gates, 48 sensors
-const int startGate = 0;  //useful for testing
-const int endGate = 24;   //useful for testing
-const int debeebounce = 30;
-const int outputDelay = 15000;  //prints bee counts every 15 seconds
-unsigned long lastOutput = 0;
-unsigned long currentTime = 0;
-
+#define numberOfGates 24
+#define startGate 0
+#define endGate 24
+#define debeebounce 30
+#define outputDelay 15000
+uint32_t lastOutput = 0;
+uint32_t currentTime = 0;
 
 //boolean 0 or 1 sensor readings, 1 bee is present
 boolean inSensorReading[numberOfGates];
@@ -69,42 +99,76 @@ boolean lastOutSensorReading[numberOfGates];
 boolean checkStateIn[numberOfGates];
 boolean checkStateOut[numberOfGates];
 
-int inCount[numberOfGates];
-int outCount[numberOfGates];
+int16_t inCount[numberOfGates];
+int16_t outCount[numberOfGates];
   
-unsigned long startInReadingTime[numberOfGates];
-unsigned long startOutReadingTime[numberOfGates];
+uint32_t startInReadingTime[numberOfGates];
+uint32_t startOutReadingTime[numberOfGates];
 
-unsigned long inSensorTime[numberOfGates];
-unsigned long outSensorTime[numberOfGates];
+uint32_t inSensorTime[numberOfGates];
+uint32_t outSensorTime[numberOfGates];
  
-unsigned long lastInFinishedTime[numberOfGates];
-unsigned long lastOutFinishedTime[numberOfGates];
+uint32_t lastInFinishedTime[numberOfGates];
+uint32_t lastOutFinishedTime[numberOfGates];
   
-unsigned long inReadingTimeHigh[numberOfGates];
-unsigned long outReadingTimeHigh[numberOfGates];
+uint32_t inReadingTimeHigh[numberOfGates];
+uint32_t outReadingTimeHigh[numberOfGates];
 
-unsigned long lastInTime[numberOfGates];
-unsigned long lastOutTime[numberOfGates];
+uint32_t lastInTime[numberOfGates];
+uint32_t lastOutTime[numberOfGates];
 
-unsigned long lastInReadingTimeHigh[numberOfGates];
-unsigned long lastOutReadingTimeHigh[numberOfGates];
+uint32_t lastInReadingTimeHigh[numberOfGates];
+uint32_t lastOutReadingTimeHigh[numberOfGates];
 
-int totalTimeTravelGoingOut[numberOfGates];
-int totalTimeTravelGoingIn[numberOfGates];
+int16_t totalTimeTravelGoingOut[numberOfGates];
+int16_t totalTimeTravelGoingIn[numberOfGates];
 
-int firstTestInVariable[numberOfGates];
-
-
-int firstTestOutVariable[numberOfGates];
+int16_t firstTestInVariable[numberOfGates];
 
 
-int inTotal;
-int outTotal;
+int16_t firstTestOutVariable[numberOfGates];
+
+
+uint16_t inTotal;
+uint16_t outTotal;
 
 
 int n = 0;
 
+
+uint8_t switchBank[numberOfGates / 4]; // 4 gates per chip, 8 sensors
+uint8_t oldSwitchBank[numberOfGates / 4];
+
+void sensor_to_name (uint8_t sensor, char *buf)
+{
+  // Take a sensor number and convert it to a gate name
+  // Gate name is placed in buffer (must be at least 4 bytes)
+  snprintf(buf, 4, "%0d%c", (sensor >> 1), (sensor % 2) ? 'O' : 'I');
+}
+
+bool get_sensor_value(uint8_t sensor)
+{
+  uint8_t byte;
+  uint8_t result;
+  uint8_t bit_position;
+
+  byte = sensor / 8;
+  result = switchBank[byte] & gatemap[(sensor % 8)];
+  if (result) return(true);
+  return(false);
+}
+
+bool get_o_sensor_value(uint8_t sensor)
+{
+  uint8_t byte;
+  uint8_t result;
+  uint8_t bit_position;
+
+  byte = sensor / 8;
+  result = oldSwitchBank[byte] & gatemap[(sensor % 8)];
+  if (result) return(true);
+  return(false);
+}
 
 
 void setup ()
@@ -124,28 +188,15 @@ void setup ()
   digitalWrite(powerGates2, LOW);
 
   pinMode(testLed, OUTPUT);
+
+  memset(switchBank, 0, (numberOfGates / 4));
+  memset(oldSwitchBank, 0, (numberOfGates / 4));
   
 }  // end of setup
 
-byte switchBank1;
-byte oldSwitchBank1; 
-byte switchBank2;
-byte oldSwitchBank2; 
-byte switchBank3;
-byte oldSwitchBank3; 
-byte switchBank4;
-byte oldSwitchBank4; 
-byte switchBank5;
-byte oldSwitchBank5; 
-byte switchBank6;
-byte oldSwitchBank6; 
-byte switchBank7;
-byte oldSwitchBank7; 
-byte switchBank8;
-byte oldSwitchBank8; 
-
 void loop ()
 {
+  uint8_t gate;
   currentTime = millis();  
   
   digitalWrite(powerGates1, HIGH);
@@ -164,91 +215,20 @@ void loop ()
   //Reading 24 bits at 1Mhz should take about 24 microseconds,
   //reading 24 bits at 3Mhz should take about 8us
   //reading 48 bits at 3Mhz should take abotu 16us
-  switchBank1 = SPI.transfer (0); //8
-  switchBank2 = SPI.transfer (0); //16
-  switchBank3 = SPI.transfer (0); //24
-  switchBank4 = SPI.transfer (0); //32
-  switchBank5 = SPI.transfer (0); //40
-  switchBank6 = SPI.transfer (0); //48  
-  
+  (void) SPI.transfer((uint8_t *)switchBank, (uint32_t)(numberOfGates / 4));
  
   
-  if(switchBank1 != oldSwitchBank1 || switchBank2 != oldSwitchBank2 || switchBank3 != oldSwitchBank3 || switchBank4 != oldSwitchBank4 || switchBank5 != oldSwitchBank5 || switchBank6 != oldSwitchBank6)
+  
+  // Store received values from gate scan if changed
+  if (memcmp(switchBank, oldSwitchBank, (numberOfGates / 4)))
   {
-    //convert bytes to gate values
-    int gate = 0;
-    for(int i = 0; i < 8; i++)
+    for(gate=0; gate < numberOfGates; gate++)
     {
-      if((switchBank1 >> i) & 1)
-          outSensorReading[gate] = HIGH;
-      else outSensorReading[gate] = LOW;
-      i++;
-      if((switchBank1 >> i) & 1)
-          inSensorReading[gate] = HIGH;
-      else inSensorReading[gate] = LOW;       
-      gate++;  
+      inSensorReading[gate] = get_sensor_value(gate * 2);			// Even number sensors are inside
+      outSensorReading[gate] = get_sensor_value(gate * 2 + 1);		// Odd number gates are outside
     }
-    for(int i = 0; i < 8; i++)
-    {
-      if((switchBank2 >> i) & 1)
-          outSensorReading[gate] = HIGH;
-      else outSensorReading[gate] = LOW;
-      i++;
-      if((switchBank2 >> i) & 1)
-          inSensorReading[gate] = HIGH;
-      else inSensorReading[gate] = LOW;      
-      gate++;  
-    }
-    for(int i = 0; i < 8; i++)
-    {
-      if((switchBank3 >> i) & 1)
-          outSensorReading[gate] = HIGH;
-      else outSensorReading[gate] = LOW;
-      i++;
-      if((switchBank3 >> i) & 1)
-          inSensorReading[gate] = HIGH;
-      else inSensorReading[gate] = LOW;       
-      gate++;  
-    }
-    for(int i = 0; i < 8; i++)
-    {
-      if((switchBank4 >> i) & 1)
-          outSensorReading[gate] = HIGH;
-      else outSensorReading[gate] = LOW;
-      i++;
-      if((switchBank4 >> i) & 1)
-          inSensorReading[gate] = HIGH;
-      else inSensorReading[gate] = LOW;       
-      gate++;  
-    }
-    for(int i = 0; i < 8; i++)
-    {
-      if((switchBank5 >> i) & 1)
-          outSensorReading[gate] = HIGH;
-      else outSensorReading[gate] = LOW;
-      i++;
-      if((switchBank5 >> i) & 1)
-          inSensorReading[gate] = HIGH;
-      else inSensorReading[gate] = LOW;       
-      gate++;  
-    }
-    for(int i = 0; i < 8; i++)
-    {
-      if((switchBank6 >> i) & 1)
-          outSensorReading[gate] = HIGH;
-      else outSensorReading[gate] = LOW;
-      i++;
-      if((switchBank6 >> i) & 1)
-          inSensorReading[gate] = HIGH;
-      else inSensorReading[gate] = LOW;      
-      gate++;  
-    }  
-    oldSwitchBank1 = switchBank1;
-    oldSwitchBank2 = switchBank2;
-    oldSwitchBank3 = switchBank3;
-    oldSwitchBank4 = switchBank4;
-    oldSwitchBank5 = switchBank5;
-    oldSwitchBank6 = switchBank6;
+    // Move current retrieved values to old values for comparison
+    memcpy(oldSwitchBank, switchBank, (numberOfGates / 4));
   }
 
   for (int i = startGate; i < endGate; i++) 
