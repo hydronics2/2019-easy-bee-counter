@@ -77,6 +77,7 @@ SIP-9, 8 resistors, 9 pins
 - [560uF, 6.3V Capacitor](https://www.mouser.com/ProductDetail/661-APSC6R3L561MH08S)
 low esr, 3.5mm lead spacing, 8mm diameter
 - N-Channel Mosfet [FQP30N06](https://www.mouser.com/ProductDetail/512-FQP30N06L), qty(2)
+  - [chinswain](https://github.com/hydronics2/2019-easy-bee-counter/issues/20#issuecomment-2094117078) suggested using this IRLB8721PbF N-Channel mosfet.
 
 #### Alternative pricing from Chinese distributor LCSC
 Someone pointed out some alternative pricing that can really bring the cost down.
